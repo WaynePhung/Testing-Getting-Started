@@ -12,8 +12,8 @@ This document describes download, build, install and test steps for the Open Spe
 Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/forums/forum/getting-started/) to report bugs and suggest enhancements.
 
 ## Table of Contents
-[1\. Release 2020a Installation](#1\.-Release-2020a-Installation)   
-* [1\.1 Requirements for OSP](#1\.1-Requirements-for-OSP)
+[1\. Release 2020a Installation](#1\.-release-2020a-installation)   
+* [1\.1 Requirements for OSP](#1\.1-requirements-for-osp)
     * [1\.1\.1 OSP Device Requirements \(NEW SECTION\)](#1\.1\.1-OSP-Device-Requirements-\(NEW-SECTION\))
     * [1\.1\.2 Computer Requirements](#1\.1\.2-Computer-Requirements)
     * [1\.1\.3 Installation Requirements](#1\.1\.3-Installation-Requirements)
@@ -35,7 +35,7 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 * [2\.4 Test EWS \- PHP Version](#2\.4-Test-EWS-\--PHP-Version)  
 
 [3\. Release 2020a Development - EWS Node\.js version](#3\.-Release-2020a-Development-\--EWS-Node\.js-version)
-&nbsp;  
+
 &nbsp;  
 ## 1\. Release 2020a Installation
 ##### \[[back to table of contents](#Table-of-Contents)]
