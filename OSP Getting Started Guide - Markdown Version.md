@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="EWSGSG.css">
 
-<table style="width: 100%">
+<table style="width: 100%; background-color: #ffff73;">
     <thead class="tg yellowHighlight">
         <tr>
             <th class="tg-c3ow"><b>Thursday Agenda - Sections to Define in the Guide</b></th>
