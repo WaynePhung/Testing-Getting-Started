@@ -521,7 +521,7 @@ these values, you will notice that the low frequency noise is significantly redu
 </figure>
 
 &nbsp;
-## 3 Release 2020a Development\: EWS \(Node\.js version\)
+## 3 Release 2020a Development\: EWS \(Node.js version\)
 ##### \[[back to table of contents](#Table-of-Contents)]
 
 **Note** - This chapter is still a work in progress and will be more complete in the next release.
