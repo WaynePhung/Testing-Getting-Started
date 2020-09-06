@@ -34,7 +34,7 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 * [2\-3 Test RT\-MHA](#2\-3-Test-RT\-MHA)
 * [2\-4 Test EWS \(PHP Version\)](#2\-4-Test-EWS-\(PHP-Version\))  
 
-[3 Release 2020a Development\: EWS \(Node\.js version\)](#3-Release-2020a-Development\:-EWS-\(Nodejs-version\))
+[3 Release 2020a Development\: EWS \(Node\.js version\)](#3-Release-2020a-Development\:-EWS-Nodejs-version)
 
 &nbsp;  
 ## 1 Release 2020a Installation
