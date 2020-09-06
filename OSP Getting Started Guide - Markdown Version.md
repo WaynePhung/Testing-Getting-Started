@@ -14,7 +14,7 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 ## Table of Contents
 [1 Release 2020a Installation](#1-release-2020a-installation)   
 * [1\-1 Requirements for OSP](#1\-1-requirements-for-osp)
-    * [1\-1\-1 OSP Device Requirements \(NEW SECTION\)](#1\-1\-1-osp-device-requirements-\(new-section\))
+    * [1\-1\-1 OSP Device Requirements \(NEW SECTION\)](#1-1-1-osp-device-requirements-new-section)
     * [1\-1\-2 Computer Requirements](#1\-1\-2-computer-requirements)
     * [1\-1\-3 Installation Requirements](#1\-1\-3-installation-requirements)
 * [1\-2 Device Installation](#1\-2-device-installation)
@@ -23,8 +23,8 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
     * [1\-4\-1 Installing Everything \- RT\-MHA and Node\.js version of EWS](#1\-4\-1-installing-everything-\--rt\-mha-and-nodejs-version-of-ews)
     * [1\-4\-2 Installing Everything \- RT\-MHA and PHP version of EWS](#1\-4\-2-installing-everything-\--rt\-mha-and-php-version-of-ews)
     * [1\-4\-3 Installing/Updating just the RT\-MHA](#1\-4\-3-installingupdating-just-the-rt-mha)
-    * [1\-4\-4 Installing/Updating just the Node\.js version of EWS](#1\-4\-4-installing/updating-just-the-nodejs-version-of-ews)
-    * [1\-4\-5 Installing/Updating just the PHP version of EWS](#1\-4\-5-installing/updating-just-the-php-version-of-ews)  
+    * [1\-4\-4 Installing/Updating just the Node\.js version of EWS](#1\-4\-4-installingupdating-just-the-nodejs-version-of-ews)
+    * [1\-4\-5 Installing/Updating just the PHP version of EWS](#1\-4\-5-installingupdating-just-the-php-version-of-ews)  
 
 [2 Release 2020a Package Testing and Validation](#2-release-2020a-package-testing-and-validation)
 * [2\-1 OSP Device Testing](#2\-1-osp-device-testing)
@@ -32,7 +32,7 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
     * [2\-2\-1 On Mac Computers](#2\-2\-1-on-mac-computers)
     * [2\-2\-2 On Linux Computers](#2\-2\-2-on-linux-computers)
 * [2\-3 Test RT\-MHA](#2\-3-test-rt\-mha)
-* [2\-4 Test EWS \(PHP Version\)](#2\-4-test-ews-\(php-version\))  
+* [2\-4 Test EWS \(PHP Version\)](#2-4-test-ews-php-version)  
 
 [3 Release 2020a Development\: EWS \(Node\.js version\)](#3-release-2020a-development-ews-nodejs-version)
 
