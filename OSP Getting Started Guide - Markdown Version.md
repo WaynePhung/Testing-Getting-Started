@@ -20,10 +20,10 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 * [1\-2 Device Installation](#1\-2-Device-Installation)
 * [1\-3 Download Files from OSP](#1\-3-Download-Files-from-OSP)
 * [1\-4 Choosing the Installation Method](#1\-4-Choosing-the-Installation-Method)
-    * [1\-4\-1 Installing Everything \- RT\-MHA and Node\.js version of EWS](#1\-4\-1-Installing-Everything-\--RT\-MHA-and-Node\.js-version-of-EWS)
+    * [1\-4\-1 Installing Everything \- RT\-MHA and Node\.js version of EWS](#1\-4\-1-Installing-Everything-\--RT\-MHA-and-Nodejs-version-of-EWS)
     * [1\-4\-2 Installing Everything \- RT\-MHA and PHP version of EWS](#1\-4\-2-Installing-Everything-\--RT\-MHA-and-PHP-version-of-EWS)
     * [1\-4\-3 Installing/Updating just the RT\-MHA](#1\-4\-3-Installing/Updating-just-the-RT\-MHA)
-    * [1\-4\-4 Installing/Updating just the Node\.js version of EWS](#1\-4\-4-Installing/Updating-just-the-Node\.js-version-of-EWS)
+    * [1\-4\-4 Installing/Updating just the Node\.js version of EWS](#1\-4\-4-Installing/Updating-just-the-Nodejs-version-of-EWS)
     * [1\-4\-5 Installing/Updating just the PHP version of EWS](#1\-4\-5-Installing/Updating-just-the-PHP-version-of-EWS)  
 
 [2 Release 2020a Package Testing and Validation](#2-Release-2020a-Package-Testing-and-Validation)
@@ -247,7 +247,7 @@ it for the listeners specific prescription.
 Below are the available options to go about the installation process.
 1. **Installing Everything - RT-MHA and Node\.js version of EWS**  
 This is the latest version of OSP. Future releases will completely adopt
-Node\.js.
+Node.js.
 2. **Installing Everything - RT-MHA and PHP version of EWS**  
 This is the legacy version of OSP, which will eventually not be used in
 future releases. This version still has the \Goldilocks" page.
@@ -265,7 +265,7 @@ the latest version of a software package related to Node.js
 called** `node-pre-gyp` as well as the `npm` package** to resolve
 installation issues and error messages in advance. This step will eventually be fixed in a future release
 &nbsp;
-#### _1\-4\-1 Installing Everything \- RT\-MHA and Node\.js version of EWS_
+#### _1\-4\-1 Installing Everything \- RT\-MHA and Node.js version of EWS_
 
 <ol>
     <li>Run the command <code>./install_all_njs</code>, which does the following:</li>
@@ -311,7 +311,7 @@ installation issues and error messages in advance. This step will eventually be 
 3. To check whether the RT-MHA has successfully installed in your system, In the current terminal, run `osp`, this should start running the RT-MHA.
 
 &nbsp;
-#### _1\-4\-4 Installing/Updating just the Node\.js version of EWS_
+#### _1\-4\-4 Installing/Updating just the Node.js version of EWS_
 
 1. **This step is only needed if you are installing this version of EWS for the first time.** Run the command `./pre_req_all`. This command will identify your OS install all the necessary prerequisite packages in your system
 2. Run the command `./ews_njs`. This will install the Node.js version of EWS on your system.
