@@ -210,14 +210,14 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 [3. Release 2020a Development - EWS Node.js version](#3\.-Release-2020a-Development-\--EWS-Node.js-version)
 &nbsp;  
 &nbsp;  
-## 1. Release 2020a Installation
+## 1\. Release 2020a Installation
 ##### \[[back to table of contents](#Table-of-Contents)]
 &nbsp;   
 This section goes over what is required to install the Open Speech Platform software and what are the steps needed for the different installation methods.  The installation process of OSP may take around 30−90 minutes, depending on your computer, download speeds over the internet, and any installation errors that you may encounter and resolve.
 &nbsp;   
-### 1.1 Requirements for OSP
+### 1\.1 Requirements for OSP
 &nbsp;
-#### _1.1.1 OSP Device Requirements **\(NEW SECTION\)**_
+#### _1\.1\.1 OSP Device Requirements **\(NEW SECTION\)**_
 <mark class="yellowHighlight">If you have received OSP devices, below are the devices are needed.</mark>
 &nbsp;  
 <mark class="yellowHighlight">Show and Describe List of Devices</mark>
