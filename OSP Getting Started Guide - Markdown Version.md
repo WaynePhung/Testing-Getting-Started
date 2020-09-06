@@ -12,39 +12,39 @@ This document describes download, build, install and test steps for the Open Spe
 Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/forums/forum/getting-started/) to report bugs and suggest enhancements.
 
 ## Table of Contents
-[1\. Release 2020a Installation](#1\.-release-2020a-installation)   
-* [1\.1 Requirements for OSP](#1\.1-requirements-for-osp)
-    * [1\.1\.1 OSP Device Requirements \(NEW SECTION\)](#1\.1\.1-OSP-Device-Requirements-\(NEW-SECTION\))
-    * [1\.1\.2 Computer Requirements](#1\.1\.2-Computer-Requirements)
-    * [1\.1\.3 Installation Requirements](#1\.1\.3-Installation-Requirements)
-* [1\.2 Device Installation](#1\.2-Device-Installation)
-* [1\.3 Download Files from OSP](#1\.3-Download-Files-from-OSP)
-* [1\.4 Choosing the Installation Method](#1\.4-Choosing-the-Installation-Method)
-    * [1\.4\.1 Installing Everything \- RT\-MHA and Node.js version of EWS](#1\.4\.1-Installing-Everything-\--RT\-MHA-and-Node.js-version-of-EWS)
-    * [1\.4\.2 Installing Everything \- RT\-MHA and PHP version of EWS](#1\.4\.2-Installing-Everything-\--RT\-MHA-and-PHP-version-of-EWS)
-    * [1\.4\.3 Installing/Updating just the RT\-MHA](#1\.4\.3-Installing/Updating-just-the-RT\-MHA)
-    * [1\.4\.4 Installing/Updating just the Node.js version of EWS](#1\.4\.4-Installing/Updating-just-the-Node.js-version-of-EWS)
-    * [1\.4\.5 Installing/Updating just the PHP version of EWS](#1\.4\.5-Installing/Updating-just-the-PHP-version-of-EWS)  
+[1 Release 2020a Installation](#1-release-2020a-installation)   
+* [1\-1 Requirements for OSP](#1\-1-requirements-for-osp)
+    * [1\-1\-1 OSP Device Requirements \(NEW SECTION\)](#1\-1\-1-OSP-Device-Requirements-\(NEW-SECTION\))
+    * [1\-1\-2 Computer Requirements](#1\-1\-2-Computer-Requirements)
+    * [1\-1\-3 Installation Requirements](#1\-1\-3-Installation-Requirements)
+* [1\-2 Device Installation](#1\-2-Device-Installation)
+* [1\-3 Download Files from OSP](#1\-3-Download-Files-from-OSP)
+* [1\-4 Choosing the Installation Method](#1\-4-Choosing-the-Installation-Method)
+    * [1\-4\-1 Installing Everything \- RT\-MHA and Node.js version of EWS](#1\-4\-1-Installing-Everything-\--RT\-MHA-and-Node.js-version-of-EWS)
+    * [1\-4\-2 Installing Everything \- RT\-MHA and PHP version of EWS](#1\-4\-2-Installing-Everything-\--RT\-MHA-and-PHP-version-of-EWS)
+    * [1\-4\-3 Installing/Updating just the RT\-MHA](#1\-4\-3-Installing/Updating-just-the-RT\-MHA)
+    * [1\-4\-4 Installing/Updating just the Node.js version of EWS](#1\-4\-4-Installing/Updating-just-the-Node.js-version-of-EWS)
+    * [1\-4\-5 Installing/Updating just the PHP version of EWS](#1\-4\-5-Installing/Updating-just-the-PHP-version-of-EWS)  
 
-[2\. Release 2020a Package Testing and Validation](#2\.-Release-2020a-Package-Testing-and-Validation)
-* [2\.1 OSP Device Testing](#2\.1-OSP-Device-Testing)
-* [2\.2 Connecting Your Audio Device](#2\.2-Connecting-Your-Audio-Device)
-    * [2\.2\.1 On Mac Computers](#2\.2\.1-On-Mac-Computers)
-    * [2\.2\.2 On Linux Computers](#2\.2\.2-On-Linux-Computers)
-* [2\.3 Test RT\-MHA](#2\.3-Test-RT\-MHA)
-* [2\.4 Test EWS \- PHP Version](#2\.4-Test-EWS-\--PHP-Version)  
+[2 Release 2020a Package Testing and Validation](#2-Release-2020a-Package-Testing-and-Validation)
+* [2\-1 OSP Device Testing](#2\-1-OSP-Device-Testing)
+* [2\-2 Connecting Your Audio Device](#2\-2-Connecting-Your-Audio-Device)
+    * [2\-2\-1 On Mac Computers](#2\-2\-1-On-Mac-Computers)
+    * [2\-2\-2 On Linux Computers](#2\-2\-2-On-Linux-Computers)
+* [2\-3 Test RT\-MHA](#2\-3-Test-RT\-MHA)
+* [2\-4 Test EWS \(PHP Version\)](#2\-4-Test-EWS-\(PHP-Version\))  
 
-[3\. Release 2020a Development - EWS Node\.js version](#3\.-Release-2020a-Development-\--EWS-Node\.js-version)
+[3 Release 2020a Development \: EWS \(Node\.js version\)](#3-Release-2020a-Development-\:-EWS-\(Node\.js-version\))
 
 &nbsp;  
-## 1\. Release 2020a Installation
+## 1 Release 2020a Installation
 ##### \[[back to table of contents](#Table-of-Contents)]
 &nbsp;   
 This section goes over what is required to install the Open Speech Platform software and what are the steps needed for the different installation methods.  The installation process of OSP may take around 30−90 minutes, depending on your computer, download speeds over the internet, and any installation errors that you may encounter and resolve.
 &nbsp;   
-### 1\.1 Requirements for OSP
+### 1\-1 Requirements for OSP
 &nbsp;
-#### _1\.1\.1 OSP Device Requirements **\(NEW SECTION\)**_
+#### _1\-1\-1 OSP Device Requirements **\(NEW SECTION\)**_
 <mark class="yellowHighlight">If you have received OSP devices, below are the devices are needed.</mark>
 &nbsp;  
 <mark class="yellowHighlight">Show and Describe List of Devices</mark>
@@ -78,7 +78,7 @@ This section goes over what is required to install the Open Speech Platform soft
     </table>
 
 &nbsp;
-#### _1.1.2 Computer Requirements_
+#### _1\-1\-2 Computer Requirements_
 In order to use OSP, you must use either a Mac or a _debian-based_ Linux
 machine (such as Ubuntu or Linaro) with the following processing, memory,
 and storage requirements. Figures [1.1](#figure1-1) and [1.2](#figure1-2) provide a reference for these
@@ -115,7 +115,7 @@ After the installation, to verify that the system can deliver audio output,
 device such as a headset or pair of headphones would be used, but your
 computer’s built-in microphone and speakers are good enough as long as the
 volume settings are not set to mute.
-#### _1.1.3 Installation Requirements_
+#### _1\-1\-3 Installation Requirements_
 Finally, these are the additional applications and tools needed to successfully
 install OSP
 * **Command Terminal**: You will need to know how to operate the
@@ -127,7 +127,7 @@ commands needed, as long as you follow the steps in order.
 You will need to install git within the terminal, if this hasn’t been
 done already.
 &nbsp;
-### 1.2 Device Installation
+### 1\-2 Device Installation
 
 <mark class="yellowHighlight">
     Describe steps needed to install the devices.
@@ -140,7 +140,7 @@ done already.
 </mark>
 
 &nbsp;
-### 1.3 Download Files from OSP
+### 1\-3 Download Files from OSP
 
 <mark class="yellowHighlight"><b>From the original Getting Started Guide</b></mark>  
 <ol>
@@ -237,7 +237,7 @@ for your password so the installation script can write into that directory.
 <mark class="yellowHighlight"><b>End of Martin's notes?</b></mark>
 
 &nbsp;
-### 1.4 Choosing the Installation Method
+### 1\-4 Choosing the Installation Method
 Defined below are two main components of OSP.  
 * **Real Time Master Hearing Aid (RT-MHA)** - This is the hearing
 aid algorithm which takes the audio from the environment and modifies
@@ -265,7 +265,7 @@ the latest version of a software package related to Node.js
 called** `node-pre-gyp` as well as the `npm` package** to resolve
 installation issues and error messages in advance. This step will eventually be fixed in a future release
 &nbsp;
-#### _1.4.1 Installing Everything \- RT\-MHA and Node.js version of EWS_
+#### _1\-4\-1 Installing Everything \- RT\-MHA and Node.js version of EWS_
 
 <ol>
     <li>Run the command <code>./install_all_njs</code>, which does the following:</li>
@@ -284,7 +284,7 @@ installation issues and error messages in advance. This step will eventually be 
 </ol>
 
 &nbsp;
-#### _1.4.2 Installing Everything \- RT\-MHA and PHP version of EWS_
+#### _1\-4\-2 Installing Everything \- RT\-MHA and PHP version of EWS_
 
 <ol>
     <li>Run the command <code>./install_all_php</code>, which does the following:</li>
@@ -304,36 +304,36 @@ installation issues and error messages in advance. This step will eventually be 
 </ol>
 
 &nbsp;
-#### _1.4.3 Installing/Updating just the RT\-MHA_
+#### _1\-4\-3 Installing/Updating just the RT\-MHA_
 
 1. **This step is only needed if you are installing RT-MHA for the first time.** Run the command `./pre_req_all`, which command will identify your OS install all the necessary prerequisite packages in your system.
 2. Run the command `./libosp`, which installs the librtmha and RT-MHA in your system.
 3. To check whether the RT-MHA has successfully installed in your system, In the current terminal, run `osp`, this should start running the RT-MHA.
 
 &nbsp;
-#### _1.4.4 Installing/Updating just the Node.js version of EWS_
+#### _1\-4\-4 Installing/Updating just the Node.js version of EWS_
 
 1. **This step is only needed if you are installing this version of EWS for the first time.** Run the command `./pre_req_all`. This command will identify your OS install all the necessary prerequisite packages in your system
 2. Run the command `./ews_njs`. This will install the Node.js version of EWS on your system.
 3. To check the EWS installation run `ews-backend` on the terminal, You can open a Browser window and type the URL `localhost:5000`. This will open the webpage to the Node.js version of EWS.
 
 &nbsp;
-#### _1.4.5 Installing/Updating just the PHP version of EWS_
+#### _1\-4\-5 Installing/Updating just the PHP version of EWS_
 
 1. **This step is only needed if you are installing this version of EWS for the first time.** Run the command `./pre_req_all`. This command will identify your OS install all the necessary prerequisite packages in your system
 2. Run the command `./ews_php_public`. This will install the PHP version of EWS on your system.
 3. To check the frontend run `ews` on the terminal, You can open a Browser window and type the URL `localhost:8080`. This will open the webpage to the PHP version of EWS.
 
 &nbsp;
-## 2. Release 2020a Package Testing and Validation
+## 2 Release 2020a Package Testing and Validation
 ##### \[[back to table of contents](#Table-of-Contents)]
 This chapter describes how to check that the installed software package(s) for OSP are working properly.  
 &nbsp;   
-### 2.1 OSP Device Testing
+### 2\-1 OSP Device Testing
 <mark class="yellowHighlight"><b>What devices need testing to ensure intended functionality? What are the steps?</b></mark>
 
 &nbsp;   
-### 2.2 Connecting Your Audio Device
+### 2\-2 Connecting Your Audio Device
 <mark class="yellowHighlight"><b>From Getting Started Guide</b></mark>  
 **Note**: For Mac computers, the default audio input and output built into
 the computer is sufficient for testing the audio. You do not have to follow these steps to connect your audio device, but it is recommended to do so.
@@ -404,8 +404,9 @@ Input latency: 0.002
 Output latency: 0.003
 ```
 <mark class="yellowHighlight"><b>End of Martin's notes?</b></mark>
-&nbsp;   
-#### _2.2.1 On Mac Computers_
+&nbsp; 
+
+#### _2\-2\-1 On Mac Computers_
 
 <ol>
     <li>Connect your audio device to the audio or USB port on your computer.</li>
@@ -426,7 +427,7 @@ Output latency: 0.003
 </ol>
 
 &nbsp;   
-#### _2.2.2 On Linux Computers_
+#### _2\-2\-2 On Linux Computers_
 
 1. Within the terminal, enter the command `pa devs` to give the list of the available devices and the device numbers they correspond to.
 2. Scroll up in the terminal to view a list of different devices and single-digit numbers associated with each device. Run the command `osp --input device x --output device y`, where `x` is the number associated with the device that inputs sound and `y` is the number associated with the device that outputs sound.
@@ -438,7 +439,7 @@ Output latency: 0.003
 </figure>
 
 &nbsp;   
-### 2.3 Test RT\-MHA
+### 2\-3 Test RT\-MHA
 You can interact with RT-MHA from the command line interface (CLI) to display and change the HA state. **Please make sure that the audio device is connected and that you can hear sound from the device. Otherwise, go back to section 2.1 to connect the device.**
 
 <ol>
@@ -473,7 +474,7 @@ enter the following series of commands and steps in the terminal.</li>
 </ol>
 
 &nbsp;   
-### 2.4 Test EWS \- PHP Version
+### 2\-4 Test EWS \(PHP Version\)
 
 1. For testing EWS, open two terminals side by side.
 2. In the first terminal, type `osp`. In the second terminal, type `ews`.
@@ -520,7 +521,7 @@ these values, you will notice that the low frequency noise is significantly redu
 </figure>
 
 &nbsp;
-## 3. Release 2020a Development - EWS Node.js version
+## 3 Release 2020a Development \: EWS \(Node\.js version\)
 ##### \[[back to table of contents](#Table-of-Contents)]
 
 **Note** - This chapter is still a work in progress and will be more complete in the next release.
