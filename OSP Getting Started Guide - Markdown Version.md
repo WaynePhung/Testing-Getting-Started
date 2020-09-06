@@ -1,6 +1,4 @@
-<link rel="stylesheet" type="text/css" href="EWSGSG.css">
-
-# OSP Getting Started Guide - Release 2020a
+# OSP \- EWS Getting Started Guide - Release 2020a
 Website: http://openspeechplatform.ucsd.edu/
 
 ## Abstract
@@ -58,6 +56,27 @@ This section goes over what is required to install the Open Speech Platform soft
     </ul>
 <mark class="yellowHighlight">...or Make a 2-Column Table?</mark>
     <table class="tg yellowHighlight">
+        <thead>
+        <tr>
+            <th class="tg-c3ow">Device</th>
+            <th class="tg-c3ow">Description of device.</th>
+            <th class="tg-c3ow">Image of Device</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="tg-0pky">Device #1</td>
+            <td class="tg-0pky">Description of device.</td>
+            <td class="tg-0pky"><img src="pictures/placeHolderImage.png" style="width: 200px;"></td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Device #2</td>
+            <td class="tg-0pky">Description of device.</td>
+            <td class="tg-0pky"><img src="pictures/placeHolderImage.png" style="width: 200px;"></td>
+        </tr>
+        </tbody>
+    </table>
+    <table style="background-color: yellow;">
         <thead>
         <tr>
             <th class="tg-c3ow">Device</th>
