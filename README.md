@@ -1,15 +1,15 @@
 # Table of Contents
-- [1. Release 2020a Installation](#1.-Release-2020a-installation)  
-- [1.2 Device Installation](#1.2-Device-Installation)  
+- [1\. Release 2020a Installation](#1\.-Release-2020a-installation)  
+- [1\.2 Device Installation](#1\.2-Device-Installation)  
 &nbsp;   
 This section goes over what is required to install the Open Speech Platform software and what are the steps needed for the different installation methods.  The installation process of OSP may take around 30−90 minutes, depending on your computer, download speeds over the internet, and any installation errors that you may encounter and resolve.
 &nbsp;   
-# 1. Release 2020a Installation
+# 1\. Release 2020a Installation
 ##### \[[back to table of contents](#Table-of-Contents)]
 &nbsp;   
 This section goes over what is required to install the Open Speech Platform software and what are the steps needed for the different installation methods.  The installation process of OSP may take around 30−90 minutes, depending on your computer, download speeds over the internet, and any installation errors that you may encounter and resolve.
 &nbsp;   
-# 1.1 Requirements for OSP
+# 1\.1 Requirements for OSP
 &nbsp;   
 This section goes over what is required to install the Open Speech Platform software and what are the steps needed for the different installation methods.  The installation process of OSP may take around 30−90 minutes, depending on your computer, download speeds over the internet, and any installation errors that you may encounter and resolve.
 &nbsp;  
@@ -31,7 +31,7 @@ After the installation, to verify that the system can deliver audio output,
 device such as a headset or pair of headphones would be used, but your
 computer’s built-in microphone and speakers are good enough as long as the
 volume settings are not set to mute.
-#### _1.1.3 Installation Requirements_
+#### _1\.1\.3 Installation Requirements_
 Finally, these are the additional applications and tools needed to successfully
 install OSP
 * **Command Terminal**: You will need to know how to operate the
@@ -43,4 +43,4 @@ commands needed, as long as you follow the steps in order.
 You will need to install git within the terminal, if this hasn’t been
 done already.
 &nbsp;
-# 1.2 Device Installation
+# 1\.2 Device Installation
