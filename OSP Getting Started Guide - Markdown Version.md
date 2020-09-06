@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="EWSGSG.css">
+<link rel="stylesheet" type="text/css" href="EWSGSG.css">
 
 # OSP Getting Started Guide - Release 2020a
 Website: http://openspeechplatform.ucsd.edu/
