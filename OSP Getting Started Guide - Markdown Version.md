@@ -1,176 +1,3 @@
-<link rel="stylesheet" href="EWSGSG.css">
-
-<table style="width: 100%; background-color: #ffff73;">
-    <thead class="tg yellowHighlight">
-        <tr>
-            <th class="tg-c3ow"><b>Thursday Agenda - Sections to Define in the Guide</b></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="tg-0pky yellowHighlight">
-                <ol class="letteredList">
-                    <li><u>Dhiman and Sean went over these sections.</u></li>
-                    <ol class="romanNumeralList">
-                        <li>Section for setting up devices (powering up, charging the device, and other steps).</li>
-                        <li>Section for browser connectivity ("set_mode nm" command for network mode and "set_mode hs" for hotspot mode).</li>
-                        <li>Hardware Getting Started Guide - a separate guide?</li>
-                    </ol>
-                    <li><u>Hari to help answer.</u></li>
-                    <ol class="romanNumeralList">
-                        <li>Images and descriptions of the devices.</li>
-                    </ol>
-                    <li><u>Martin to help answer.</u></li>
-                    <ol class="romanNumeralList">
-                        <li>Notes for OSP installation and downloading, compiling, testing code from Bitbucket.</li>
-                        <li>Documenting terminal command usage for Linux vs. macOS.</li>
-                        <li>HTML/CSS usage for markdown documentation?</li>
-                    </ol>
-                    <li>Documenting terminal command usage for Linux vs. macOS. <u>How to handle this, or de-prioritize this? </u></li>
-                </ol>
-                <b>Notes from Dhiman for Hardware </b>
-            <ol class="romanNumeralList">
-                <li>Could be part of a separate Getting Started Guide for devices. Problem is that any updates to device, images get wiped? Very easy to update the images, for firmware updates. Martin already writing up for software installation (EWS).</li>
-                <li>Installing Fastboot (android utility)</li>
-                <li>While device is off, plug in the USB cable into the ADB port (Android Debug Port).</li>
-                <li>While pressing and holding mute button, turn on the device.</li>
-                <li>Open up the terminal and type in <code>fastboot devices</code>. It should display one line and the ID of the device, meaning you successfully booted it up in Fastboot mode.</li>
-                <li>Grab two files (location is TBD, on Bitbucket[up to date]/GitHub): one is going be labeled "boot-v7.img", other one is labeled "rootfs.simg"</li>
-                <li>Same folder as these two files, run the following commands: <code>fastboot flash boot boot-v7.img</code>, <code>fastboot flash rootfs rootfs.simg</code></li>
-                <li>Once completed, restart the device with the headsets plugged in.</li>
-                <li>After boot, everything should be working.</li>
-                <li>Devices = Hearing aid devices (left and right BTE-RICs)</li>
-                <li>You should see a hotspot called "ospboard". On boot up, might take a moment.</li>
-                <li>Connect to hotspot using password "hearingaid".</li>
-                <li>Visit page using your browser "192.168.8.1:5000". Should get you to the Node.js pages. Without the ":5000" is where you get to the PHP pages.</li>
-                <li>Login to researcher page, change the gains to see effects on BTE-RICs. Confirm things are functioning, test to see if things are functioning.</li>
-                <li>Ask Hari for image files for the following device parts.</li>
-                <li>I see 3 USB-C ports labeled, "left", "right" and "ephys". Left and Right ports are for connecting HA, what's "ephys" port used for</li>
-                <li>There're also two LED indicators with "battery" and "speaker" sign. It doesn't light up as I turn on the device, is this behavior normal?</li>
-            </ol>
-            <b>Logging through hotspot or internet.</b>
-            <ol class="romanNumeralList">
-                <li>By default, SSH is disabled. You need to enable this via uart connectivity (auto-login as root) Login credentials are the following: username and password are both "linaro".</li>
-            </ol>
-            <b>Second hardware section: "How to do more with the device."</b>
-            <ol class="romanNumeralList">
-                <li>Connect the USB cable to the uart (universal asynchronous receive transmit) port.</li>
-                <li>Using your favorite terminal command to connect to comm. devices. "screen" (there's a bunch of them). Will have to figure out the port number ("/dev/ttyUSBX" for Linux, where "X" is the port number)</li>
-                <li>Baud rate: "115200" (example for "screen", it would be "screen /dev/ttyUSBX 115200")</li>
-                <li>Once you've established connection, you will be logged in as root.</li>
-                <li>Source code for OSP is located at /root/osp-release-staging/.</li>
-                <li>If you want to switch the unit over to network mode, they need to "set_mode nm". This will restart the device, upon restart, goes to Network Management mode.</li>
-                <li>Command <code>nmtui</code> to set up the wifi.</li>
-                <li>After connecting to wifi, update the source code if needed and do other tasks depending if it needs internet or not.</li>
-                <li>To change the hotspot SSID name, edit this file: <code>/etc/hostapd/hostapd.conf</code></li>
-                <li>In order to go to hotspot mode: run <code>set_mode hs</code></li>
-            </ol>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<!--<table class="tg yellowHighlight" style="width: 100%">
-    <thead>
-        <tr>
-            <th class="tg-c3ow"><b>Thursday Agenda - Sections to Define in the Guide</b></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="tg-0pky">
-            <b>Notes from Dhiman for Section</b>
-            <ol class="romanNumeralList">
-                <li>Could be part of a separate Getting Started Guide for devices. Problem is that any updates to device, images get wiped? Very easy to update the images, for firmware updates. Martin already writing up for software installation (EWS).</li>
-                <li>Installing Fastboot (android utility)</li>
-                <li>While device is off, plug in the USB cable into the ADB port (Android Debug Port).</li>
-                <li>While pressing and holding mute button, turn on the device.</li>
-                <li>Open up the terminal and type in <code>fastboot devices</code>. It should display one line and the ID of the device, meaning you successfully booted it up in Fastboot mode.</li>
-                <li>Grab two files (location is TBD, on Bitbucket[up to date]/GitHub): one is going be labeled "boot-v7.img", other one is labeled "rootfs.simg"</li>
-                <li>Same folder as these two files, run the following commands: <code>fastboot flash boot boot-v7.img</code>, <code>fastboot flash rootfs rootfs.simg</code></li>
-                <li>Once completed, restart the device with the headsets plugged in.</li>
-                <li>After boot, everything should be working.</li>
-                <li>Devices = Hearing aid devices (left and right BTE-RICs)</li>
-                <li>You should see a hotspot called "ospboard". On boot up, might take a moment.</li>
-                <li>Connect to hotspot using password "hearingaid".</li>
-                <li>Visit page using your browser "192.168.8.1:5000". Should get you to the Node.js pages. Without the ":5000" is where you get to the PHP pages.</li>
-                <li>Login to researcher page, change the gains to see effects on BTE-RICs. Confirm things are functioning, test to see if things are functioning.</li>
-                <li>Ask Hari for image files for the following device parts.</li>
-                <li>I see 3 USB-C ports labeled, "left", "right" and "ephys". Left and Right ports are for connecting HA, what's "ephys" port used for</li>
-                <li>There're also two LED indicators with "battery" and "speaker" sign. It doesn't light up as I turn on the device, is this behavior normal?</li>
-            </ol>
-            <b>Logging through hotspot or internet.</b>
-            <ol class="romanNumeralList">
-                <li>By default, SSH is disabled. You need to enable this via uart connectivity (auto-login as root) Login credentials are the following: username and password are both "linaro".</li>
-            </ol>
-            <b>Second section: "How to do more with the device."</b>
-            <ol class="romanNumeralList">
-                <li>Connect the USB cable to the uart (universal asynchronous receive transmit) port.</li>
-                <li>Using your favorite terminal command to connect to comm. devices. "screen" (there's a bunch of them). Will have to figure out the port number ("/dev/ttyUSBX" for Linux, where "X" is the port number)</li>
-                <li>Baud rate: "115200" (example for "screen", it would be "screen /dev/ttyUSBX 115200")</li>
-                <li>Once you've established connection, you will be logged in as root.</li>
-                <li>Source code for OSP is located at /root/osp-release-staging/.</li>
-                <li>If you want to switch the unit over to network mode, they need to "set_mode nm". This will restart the device, upon restart, goes to Network Management mode.</li>
-                <li>Command <code>nmtui</code> to set up the wifi.</li>
-                <li>After connecting to wifi, update the source code if needed and do other tasks depending if it needs internet or not.</li>
-                <li>To change the hotspot SSID name, edit this file: <code>/etc/hostapd/hostapd.conf</code></li>
-                <li>In order to go to hotspot mode: run <code>set_mode hs</code></li>
-            </ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            <b>Topics Related to Dhruv's Questions and Dhiman's Answers</b>
-                <ol>
-                    <li>I see that upon bringing up the device, it creates a hotspot named "ospboard". The ssid is password protected. Can you share the password? <u>Password: "hearingaid"</u></li>
-                    <li>I see two micro usb ports on the device labeled, "uart" and "adb". I take that uart usb port is to connect to shell over uart ? What's "adb" usb port for?<u>Uart is for the shell and ADB is for both charging the device and updating the linux kernel.</u></li>
-                    <li>I see 3 USB-C ports labeled, "left", "right" and "ephys". Left and Right ports are for connecting HA, what's "ephys" port used for<u> EPhys is an experimental port for our in house development of EEG devices; it has a high speed ADC that can be used for any analog devices.</u></li>
-                    <li>Also, if I were to ssh into the device via hotspot, what's the username and password?<u>Username: linaro Password: linaro</u></li>
-                    <li>There're also two LED indicators with "battery" and "speaker" sign. It doesn't light up as I turn on the device, is this behavior normal?<u>If there is a green light constantly on then the hearing aids are muted, in order to unmute press the speaker button. The battery button is not functional currently, it may be operational in a future firmware update.</u></li>
-                    <li>Which port is supposed to be used for charging the battery<u>The ADB port.</u></li>
-                    <li>May be all these questions are answered in some "getting started document" but I could not find it on github / bitbucket. If that's the case, can you point me to the right document?<u>We have to update your fork to get you the latest version of all documents and software. Let us know if you are able to get the devices running first we can have a zoom call if that will help.</u></li>
-                </ol>
-            <b>Sections Described by Hari (08_31 & 09_01 meetings, email threads)</b>
-                <ol>
-                    <li>“If you have OSP devices …”</li>
-                    <li>OSP ID and password</li>
-                    <li>section for network mode ("set_mode nm" command) and hotspot mode ("set_mode hs")</li>
-                    <li>download/compile/test Bitbucket code</li>
-                    <li>Host mode for browser connectivity</li>
-                    <li>Laptop section</li>
-                    <li>Powering up, charging the device, and other steps.</li>
-                    <li>Managing wearables, what happens when people get the devices.</li>
-                    <li>How to get the latest software from Bitbucket (cloning), compile & testing the code?</li>
-                </ol>
-            <b>Re #2 Network and Hotspot mode: Sean, Difference between laptop and field OSP</b>
-                <ol>
-                    <li>'set_mode' shell function for /root/.bashrc. Can be executed even without OSP source code.</li>
-                    <li>Reasons why one might want to switch the mode beyond OSP installation.</li>
-                    <ol>
-                        <li>connecting to your home wifi instead of hotspot</li>
-                        <li>updating the OS via apt-get</li>
-                        <li>development purposes</li>
-                        <li>not wanting a hot spot running on the device</li>
-                    </ol>
-                    <li>Only on the OSP board and not installed with the install scripts because it is not applicable if OSP is running on a laptop with Linux or MacOS which have their own way of setting up hotspot mode if necessary.</li>
-                    <li>More likely for someone to connect their laptop whatever internet connection it usually operates on and connect to the device on that network via its IP address, which can be found using the ‘ifconfig’ utility at the command-line on both OSes or through respective GUI tools for managing the network for the specific OS.</li>
-                </ol>
-            <b>Martin's Notes for OSP Installation</b>  
-            <br><br>
-            <b>Wayne's Thoughts/Questions</b>
-                <ol>
-                    <li>What images of the devices do I need? Where are they located and what characteristics of the devices do people need to know about?</li>
-                    <li>Installation Steps for Setting Up Device?</li>
-                    <li>Necessary for documenting the different terminal commands for both Linux and macOS? Would they also be different across operating systems when testing/validating EWS via terminal commands?</li>
-                    <li>I'm finding that HTML and some CSS helps to customize the markdown. Would this be a good idea to implement?</li>
-                    <li>I'm finding that HTML and some CSS helps to customize the markdown. Would this be a good idea to implement?</li>
-                </ol>
-            </td>
-        </tr>
-    </tbody>
-</table>-->
-&nbsp;  
-&nbsp;  
-
 # OSP Getting Started Guide - Release 2020a
 Website: http://openspeechplatform.ucsd.edu/
 
@@ -185,29 +12,29 @@ This document describes download, build, install and test steps for the Open Spe
 Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/forums/forum/getting-started/) to report bugs and suggest enhancements.
 
 ## Table of Contents
-[1. Release 2020a Installation](#1\.-Release-2020a-Installation)   
-* [1.1 Requirements for OSP](#1\.1-Requirements-for-OSP)
-    * [1.1.1 OSP Device Requirements \(NEW SECTION\)](#1\.1\.1-OSP-Device-Requirements-\(NEW-SECTION\))
-    * [1.1.2 Computer Requirements](#1\.1\.2-Computer-Requirements)
-    * [1.1.3 Installation Requirements](#1\.1\.3-Installation-Requirements)
-* [1.2 Device Installation](#1\.2-Device-Installation)
-* [1.3 Download Files from OSP](#1\.3-Download-Files-from-OSP)
-* [1.4 Choosing the Installation Method](#1\.4-Choosing-the-Installation-Method)
-    * [1.4.1 Installing Everything \- RT\-MHA and Node.js version of EWS](#1\.4\.1-Installing-Everything-\--RT\-MHA-and-Node.js-version-of-EWS)
-    * [1.4.2 Installing Everything \- RT\-MHA and PHP version of EWS](#1\.4\.2-Installing-Everything-\--RT\-MHA-and-PHP-version-of-EWS)
-    * [1.4.3 Installing/Updating just the RT\-MHA](#1\.4\.3-Installing/Updating-just-the-RT\-MHA)
-    * [1.4.4 Installing/Updating just the Node.js version of EWS](#1\.4\.4-Installing/Updating-just-the-Node.js-version-of-EWS)
-    * [1.4.5 Installing/Updating just the PHP version of EWS](#1\.4\.5-Installing/Updating-just-the-PHP-version-of-EWS)  
+[1\. Release 2020a Installation](#1\.-Release-2020a-Installation)   
+* [1\.1 Requirements for OSP](#1\.1-Requirements-for-OSP)
+    * [1\.1\.1 OSP Device Requirements \(NEW SECTION\)](#1\.1\.1-OSP-Device-Requirements-\(NEW-SECTION\))
+    * [1\.1\.2 Computer Requirements](#1\.1\.2-Computer-Requirements)
+    * [1\.1\.3 Installation Requirements](#1\.1\.3-Installation-Requirements)
+* [1\.2 Device Installation](#1\.2-Device-Installation)
+* [1\.3 Download Files from OSP](#1\.3-Download-Files-from-OSP)
+* [1\.4 Choosing the Installation Method](#1\.4-Choosing-the-Installation-Method)
+    * [1\.4\.1 Installing Everything \- RT\-MHA and Node.js version of EWS](#1\.4\.1-Installing-Everything-\--RT\-MHA-and-Node.js-version-of-EWS)
+    * [1\.4\.2 Installing Everything \- RT\-MHA and PHP version of EWS](#1\.4\.2-Installing-Everything-\--RT\-MHA-and-PHP-version-of-EWS)
+    * [1\.4\.3 Installing/Updating just the RT\-MHA](#1\.4\.3-Installing/Updating-just-the-RT\-MHA)
+    * [1\.4\.4 Installing/Updating just the Node.js version of EWS](#1\.4\.4-Installing/Updating-just-the-Node.js-version-of-EWS)
+    * [1\.4\.5 Installing/Updating just the PHP version of EWS](#1\.4\.5-Installing/Updating-just-the-PHP-version-of-EWS)  
 
-[2. Release 2020a Package Testing and Validation](#2\.-Release-2020a-Package-Testing-and-Validation)
-* [2.1 OSP Device Testing](#2\.1-OSP-Device-Testing)
-* [2.2 Connecting Your Audio Device](#2\.2-Connecting-Your-Audio-Device)
-    * [2.2.1 On Mac Computers](#2\.2\.1-On-Mac-Computers)
-    * [2.2.2 On Linux Computers](#2\.2\.2-On-Linux-Computers)
-* [2.3 Test RT\-MHA](#2\.3-Test-RT\-MHA)
-* [2.4 Test EWS \- PHP Version](#2\.4-Test-EWS-\--PHP-Version)  
+[2\. Release 2020a Package Testing and Validation](#2\.-Release-2020a-Package-Testing-and-Validation)
+* [2\.1 OSP Device Testing](#2\.1-OSP-Device-Testing)
+* [2\.2 Connecting Your Audio Device](#2\.2-Connecting-Your-Audio-Device)
+    * [2\.2\.1 On Mac Computers](#2\.2\.1-On-Mac-Computers)
+    * [2\.2\.2 On Linux Computers](#2\.2\.2-On-Linux-Computers)
+* [2\.3 Test RT\-MHA](#2\.3-Test-RT\-MHA)
+* [2\.4 Test EWS \- PHP Version](#2\.4-Test-EWS-\--PHP-Version)  
 
-[3. Release 2020a Development - EWS Node.js version](#3\.-Release-2020a-Development-\--EWS-Node.js-version)
+[3\. Release 2020a Development - EWS Node\.js version](#3\.-Release-2020a-Development-\--EWS-Node\.js-version)
 &nbsp;  
 &nbsp;  
 ## 1\. Release 2020a Installation
