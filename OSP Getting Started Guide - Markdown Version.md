@@ -2,37 +2,35 @@
 Website: http://openspeechplatform.ucsd.edu/
 
 ## Abstract
-This document describes download, build, install and test steps for the Open Speech Platform (OSP) Release 2020a software. This work is supported by:
+This document describes steps to download, build, install and test the browser-based Embedded Web Server (EWS) for the Open Speech Platform (OSP) Release 2020a software. This work is supported by:
 
 * NIH  R33-DC015046:  Self-fitting  of  Amplification:  Methodology  andCandidacy
 * NIH R01-DC015436:  A Real-time, Open, Portable, Extensible SpeechLab to University of California, San Diego.
 * NSF IIS-1838830:  Division of Information & Intelligent Systems,  ”AFramework  for  Optimizing  Hearing  Aids  In  Situ  Based  on  PatientFeedback, Auditory Context, and Audiologist Input”
 * The Qualcomm Institute  
   
-Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/forums/forum/getting-started/) to report bugs and suggest enhancements.
+Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/forums/forum/getting-started/) to report issues and suggest improvements.
 
 ## Table of Contents
 [1 Release 2020a Installation](#1-release-2020a-installation)   
 * [1\-1 Requirements for OSP](#1\-1-requirements-for-osp)
-    * [1\-1\-1 OSP Device Requirements \(NEW SECTION\)](#1-1-1-osp-device-requirements-new-section)
-    * [1\-1\-2 Computer Requirements](#1\-1\-2-computer-requirements)
-    * [1\-1\-3 Installation Requirements](#1\-1\-3-installation-requirements)
-* [1\-2 Device Installation](#1\-2-device-installation)
-* [1\-3 Download Files from OSP](#1\-3-download-files-from-osp)
-* [1\-4 Choosing the Installation Method](#1\-4-choosing-the-installation-method)
-    * [1\-4\-1 Installing Everything \- RT\-MHA and Node\.js version of EWS](#1\-4\-1-installing-everything-\--rt\-mha-and-nodejs-version-of-ews)
-    * [1\-4\-2 Installing Everything \- RT\-MHA and PHP version of EWS](#1\-4\-2-installing-everything-\--rt\-mha-and-php-version-of-ews)
-    * [1\-4\-3 Installing/Updating just the RT\-MHA](#1\-4\-3-installingupdating-just-the-rt-mha)
-    * [1\-4\-4 Installing/Updating just the Node\.js version of EWS](#1\-4\-4-installingupdating-just-the-nodejs-version-of-ews)
-    * [1\-4\-5 Installing/Updating just the PHP version of EWS](#1\-4\-5-installingupdating-just-the-php-version-of-ews)  
+    * [1\-1\-1 Computer Requirements](#1\-1\-2-computer-requirements)
+    * [1\-1\-2 Installation Requirements](#1\-1\-3-installation-requirements)
+* [1\-2 Download Files from OSP](#1\-2-download-files-from-osp)
+* [1\-3 Choosing the Installation Method](#1\-3-choosing-the-installation-method)
+    * [1\-3\-1 Installing Everything \- RT\-MHA and Node\.js version of EWS](#1\-3\-1-installing-everything-\--rt\-mha-and-nodejs-version-of-ews)
+    * [1\-3\-2 Installing Everything \- RT\-MHA and PHP version of EWS](#1\-3\-2-installing-everything-\--rt\-mha-and-php-version-of-ews)
+    * [1\-3\-3 Installing/Updating just the RT\-MHA](#1\-3\-3-installingupdating-just-the-rt-mha)
+    * [1\-3\-4 Installing/Updating just the Node\.js version of EWS](#1\-3\-4-installingupdating-just-the-nodejs-version-of-ews)
+    * [1\-3\-5 Installing/Updating just the PHP version of EWS](#1\-3\-5-installingupdating-just-the-php-version-of-ews)  
+* [1\-4 Connecting Your Audio Device](#1\-4-connecting-your-audio-device)
+    * [1\-4\-1 On Mac Computers](#1\-4\-1-on-mac-computers)
+    * [1\-4\-2 On Linux Computers](#1\-4\-2-on-linux-computers)
 
 [2 Release 2020a Package Testing and Validation](#2-release-2020a-package-testing-and-validation)
-* [2\-1 OSP Device Testing](#2\-1-osp-device-testing)
-* [2\-2 Connecting Your Audio Device](#2\-2-connecting-your-audio-device)
-    * [2\-2\-1 On Mac Computers](#2\-2\-1-on-mac-computers)
-    * [2\-2\-2 On Linux Computers](#2\-2\-2-on-linux-computers)
-* [2\-3 Test RT\-MHA](#2\-3-test-rt\-mha)
-* [2\-4 Test EWS \(PHP Version\)](#2-4-test-ews-php-version)  
+* [2\-1 Test RT\-MHA](#2\-1-test-rt\-mha)
+* [2\-2 Test EWS \(Node\.js Version\)](#2\-2-test-ews-nodejs-version)  
+* [2\-3 Test EWS \(PHP Version\)](#2\-3-test-ews-php-version)  
 
 [3 Release 2020a Development\: EWS \(Node\.js version\)](#3-release-2020a-development-ews-nodejs-version)
 
@@ -41,65 +39,12 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 ##### \[[back to table of contents](#Table-of-Contents)]
 &nbsp;   
 This section goes over what is required to install the Open Speech Platform software and what are the steps needed for the different installation methods.  The installation process of OSP may take around 30−90 minutes, depending on your computer, download speeds over the internet, and any installation errors that you may encounter and resolve.
+
 &nbsp;   
 ### 1\-1 Requirements for OSP
 &nbsp;
-#### _1\-1\-1 OSP Device Requirements **\(NEW SECTION\)**_
-<mark class="yellowHighlight">If you have received OSP devices, below are the devices are needed.</mark>
-&nbsp;  
-<mark class="yellowHighlight">Show and Describe List of Devices</mark>
-    <ul>
-        <li><mark class="yellowHighlight">Device \#1...show what specific features are in the device with a figure reference?</mark></li>
-        <img src="pictures/placeHolderImage.png" style="width: 250px;">
-        <li><mark class="yellowHighlight">Device \#1...show what specific features are in the device with a figure reference?</mark></li>
-        <img src="pictures/placeHolderImage.png" style="width: 250px;">
-    </ul>
-<mark class="yellowHighlight">...or Make a 2-Column Table?</mark>
-    <table class="tg yellowHighlight">
-        <thead>
-        <tr>
-            <th class="tg-c3ow">Device</th>
-            <th class="tg-c3ow">Description of device.</th>
-            <th class="tg-c3ow">Image of Device</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td class="tg-0pky">Device #1</td>
-            <td class="tg-0pky">Description of device.</td>
-            <td class="tg-0pky"><img src="pictures/placeHolderImage.png" style="width: 200px;"></td>
-        </tr>
-        <tr>
-            <td class="tg-0pky">Device #2</td>
-            <td class="tg-0pky">Description of device.</td>
-            <td class="tg-0pky"><img src="pictures/placeHolderImage.png" style="width: 200px;"></td>
-        </tr>
-        </tbody>
-    </table>
-    <table style="background-color: yellow;">
-        <thead>
-        <tr>
-            <th class="tg-c3ow">Device</th>
-            <th class="tg-c3ow">Description of device.</th>
-            <th class="tg-c3ow">Image of Device</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td class="tg-0pky">Device #1</td>
-            <td class="tg-0pky">Description of device.</td>
-            <td class="tg-0pky"><img src="pictures/placeHolderImage.png" style="width: 200px;"></td>
-        </tr>
-        <tr>
-            <td class="tg-0pky">Device #2</td>
-            <td class="tg-0pky">Description of device.</td>
-            <td class="tg-0pky"><img src="pictures/placeHolderImage.png" style="width: 200px;"></td>
-        </tr>
-        </tbody>
-    </table>
 
-&nbsp;
-#### _1\-1\-2 Computer Requirements_
+#### _1\-1\-1 Computer Requirements_
 In order to use OSP, you must use either a Mac or a _debian-based_ Linux
 machine (such as Ubuntu or Linaro) with the following processing, memory,
 and storage requirements. Figures [1.1](#figure1-1) and [1.2](#figure1-2) provide a reference for these
@@ -136,7 +81,7 @@ After the installation, to verify that the system can deliver audio output,
 device such as a headset or pair of headphones would be used, but your
 computer’s built-in microphone and speakers are good enough as long as the
 volume settings are not set to mute.
-#### _1\-1\-3 Installation Requirements_
+#### _1\-1\-2 Installation Requirements_
 Finally, these are the additional applications and tools needed to successfully
 install OSP
 * **Command Terminal**: You will need to know how to operate the
@@ -147,21 +92,9 @@ commands needed, as long as you follow the steps in order.
 * **GitHub and git**: Our files are stored online via our GitHub page.
 You will need to install git within the terminal, if this hasn’t been
 done already.
-&nbsp;
-### 1\-2 Device Installation
-
-<mark class="yellowHighlight">
-    Describe steps needed to install the devices.
-    <ol class="yellowHighlight">
-        <li>Important disclaimers if there are parts of the device(s) that are not functioning at the moment, which will be fixed in the future (such as the "battery" buttons?)</li>
-        <li>Powering on the device by charging it?</li>
-        <li>Bringing up the hotspot, which should say "ospboard" and connecting it using the linaro username and password?</li>
-        <li>Wired connectivity between left and right USB C-ports and the hearing aids?</li>
-    </ol>
-</mark>
 
 &nbsp;
-### 1\-3 Download Files from OSP
+### 1\-2 Download Files from OSP
 
 <mark class="yellowHighlight"><b>From the original Getting Started Guide</b></mark>  
 <ol>
@@ -258,7 +191,7 @@ for your password so the installation script can write into that directory.
 <mark class="yellowHighlight"><b>End of Martin's notes?</b></mark>
 
 &nbsp;
-### 1\-4 Choosing the Installation Method
+### 1\-3 Choosing the Installation Method
 Defined below are two main components of OSP.  
 * **Real Time Master Hearing Aid (RT-MHA)** - This is the hearing
 aid algorithm which takes the audio from the environment and modifies
@@ -286,7 +219,7 @@ the latest version of a software package related to Node.js
 called** `node-pre-gyp` as well as the `npm` package** to resolve
 installation issues and error messages in advance. This step will eventually be fixed in a future release
 &nbsp;
-#### _1\-4\-1 Installing Everything \- RT\-MHA and Node.js version of EWS_
+#### _1\-3\-1 Installing Everything \- RT\-MHA and Node.js version of EWS_
 
 <ol>
     <li>Run the command <code>./install_all_njs</code>, which does the following:</li>
@@ -305,7 +238,7 @@ installation issues and error messages in advance. This step will eventually be 
 </ol>
 
 &nbsp;
-#### _1\-4\-2 Installing Everything \- RT\-MHA and PHP version of EWS_
+#### _1\-3\-2 Installing Everything \- RT\-MHA and PHP version of EWS_
 
 <ol>
     <li>Run the command <code>./install_all_php</code>, which does the following:</li>
@@ -325,42 +258,34 @@ installation issues and error messages in advance. This step will eventually be 
 </ol>
 
 &nbsp;
-#### _1\-4\-3 Installing/Updating just the RT\-MHA_
+#### _1\-3\-3 Installing/Updating just the RT\-MHA_
 
 1. **This step is only needed if you are installing RT-MHA for the first time.** Run the command `./pre_req_all`, which command will identify your OS install all the necessary prerequisite packages in your system.
 2. Run the command `./libosp`, which installs the librtmha and RT-MHA in your system.
 3. To check whether the RT-MHA has successfully installed in your system, In the current terminal, run `osp`, this should start running the RT-MHA.
 
 &nbsp;
-#### _1\-4\-4 Installing/Updating just the Node.js version of EWS_
+#### _1\-3\-4 Installing/Updating just the Node.js version of EWS_
 
 1. **This step is only needed if you are installing this version of EWS for the first time.** Run the command `./pre_req_all`. This command will identify your OS install all the necessary prerequisite packages in your system
 2. Run the command `./ews_njs`. This will install the Node.js version of EWS on your system.
 3. To check the EWS installation run `ews-backend` on the terminal, You can open a Browser window and type the URL `localhost:5000`. This will open the webpage to the Node.js version of EWS.
 
 &nbsp;
-#### _1\-4\-5 Installing/Updating just the PHP version of EWS_
+#### _1\-3\-5 Installing/Updating just the PHP version of EWS_
 
 1. **This step is only needed if you are installing this version of EWS for the first time.** Run the command `./pre_req_all`. This command will identify your OS install all the necessary prerequisite packages in your system
 2. Run the command `./ews_php_public`. This will install the PHP version of EWS on your system.
 3. To check the frontend run `ews` on the terminal, You can open a Browser window and type the URL `localhost:8080`. This will open the webpage to the PHP version of EWS.
 
 &nbsp;
-## 2 Release 2020a Package Testing and Validation
-##### \[[back to table of contents](#Table-of-Contents)]
-This chapter describes how to check that the installed software package(s) for OSP are working properly.  
-&nbsp;   
-### 2\-1 OSP Device Testing
-<mark class="yellowHighlight"><b>What devices need testing to ensure intended functionality? What are the steps?</b></mark>
 
-&nbsp;   
-### 2\-2 Connecting Your Audio Device
+### 1\-4 Connecting Your Audio Device
 <mark class="yellowHighlight"><b>From Getting Started Guide</b></mark>  
 **Note**: For Mac computers, the default audio input and output built into
 the computer is sufficient for testing the audio. You do not have to follow these steps to connect your audio device, but it is recommended to do so.
 
-<mark class="yellowHighlight"><b>Martin's Notes for Testing Audio Input/Output - More to include??</b></mark>  
-# Running OSP
+<mark class="yellowHighlight"><b>Martin's Notes for Testing Audio Input/Output</b></mark> 
 
 The `osp` process implements the RT-MHA functions.  You can run it from any directory.
 ```
@@ -427,7 +352,7 @@ Output latency: 0.003
 <mark class="yellowHighlight"><b>End of Martin's notes?</b></mark>
 &nbsp; 
 
-#### _2\-2\-1 On Mac Computers_
+#### _1\-4\-1 On Mac Computers_
 
 <ol>
     <li>Connect your audio device to the audio or USB port on your computer.</li>
@@ -448,7 +373,7 @@ Output latency: 0.003
 </ol>
 
 &nbsp;   
-#### _2\-2\-2 On Linux Computers_
+#### _1\-4\-2 On Linux Computers_
 
 1. Within the terminal, enter the command `pa devs` to give the list of the available devices and the device numbers they correspond to.
 2. Scroll up in the terminal to view a list of different devices and single-digit numbers associated with each device. Run the command `osp --input device x --output device y`, where `x` is the number associated with the device that inputs sound and `y` is the number associated with the device that outputs sound.
@@ -459,8 +384,13 @@ Output latency: 0.003
     <figcaption class="figcaption">Figure 2.3: List of devices displayed by running the <code>pa devs</code> command.</figcaption>
 </figure>
 
-&nbsp;   
-### 2\-3 Test RT\-MHA
+&nbsp;  
+## 2 Release 2020a Package Testing and Validation
+##### \[[back to table of contents](#Table-of-Contents)]
+This chapter describes how to check that the installed software package(s) for OSP are working properly.
+
+&nbsp;    
+### 2\-1 Test RT\-MHA
 You can interact with RT-MHA from the command line interface (CLI) to display and change the HA state. **Please make sure that the audio device is connected and that you can hear sound from the device. Otherwise, go back to section 2.1 to connect the device.**
 
 <ol>
@@ -495,23 +425,34 @@ enter the following series of commands and steps in the terminal.</li>
 </ol>
 
 &nbsp;   
-### 2\-4 Test EWS \(PHP Version\)
-
+### 2\-2 Test EWS \(Node\.js Version\)
 1. For testing EWS, open two terminals side by side.
 2. In the first terminal, type `osp`. In the second terminal, type `ews`.
-3. Open a browser, such as Chrome. Enter `localhost:8080` in the search bar. You will see the landing page as shown in Figure [2.7](#figure2-7).
-    
+3. Open a browser, such as Chrome. Enter `localhost:5000` in the search bar. You will see the landing page as shown in Figure [2.7](#figure2-7).
+
 <figure id="figure2-7">
-    <img src="pictures/LandingPage.png" style="width: 500px;">
+    <img src="pictures/nodejs1.png" style="width: 500px;">
     <figcaption class="figcaption leftAlign">Figure 2.7: OSP Landing Page. Some of the apps are not yet connected to RT-MHA, but included here for early feedback on the user interface. These in progress web-apps are 4AFC and AB Task apps.</figcaption>
 </figure>
 
-4. There are several blue-green buttons with labels. Navigate and click the one labeled "Researcher Page". What you should see is the Researcher
-Page interface, similar to Figure [2.8](#figure2-8).
+&nbsp;  
+### 2\-3 Test EWS \(PHP Version\)
 
+1. For testing EWS, open two terminals side by side.
+2. In the first terminal, type `osp`. In the second terminal, type `ews`.
+3. Open a browser, such as Chrome. Enter `localhost:8080` in the search bar. You will see the landing page as shown in Figure [2.8](#figure2-8).
+    
 <figure id="figure2-8">
+    <img src="pictures/LandingPage.png" style="width: 500px;">
+    <figcaption class="figcaption leftAlign">Figure 2.8: OSP Landing Page. Some of the apps are not yet connected to RT-MHA, but included here for early feedback on the user interface. These in progress web-apps are 4AFC and AB Task apps.</figcaption>
+</figure>
+
+4. There are several blue-green buttons with labels. Navigate and click the one labeled "Researcher Page". What you should see is the Researcher
+Page interface, similar to Figure [2.9](#figure2-9).
+
+<figure id="figure2-9">
     <img src="pictures/ResearcherPage.png" style="width: 500px;">
-    <figcaption class="figcaption leftAlign">Figure 2.8: OSP Researcher Page. You can change Amplification, Noise Management and Feedback Management values from the first, second and
+    <figcaption class="figcaption leftAlign">Figure 2.9: OSP Researcher Page. You can change Amplification, Noise Management and Feedback Management values from the first, second and
 third tabs, respectively</figcaption>
 </figure>
 
@@ -536,9 +477,9 @@ attenuation for the 250, 500, and 1000 Hz frequencies.
 10. Press the "Transmit" button below and listen. As a result of changing
 these values, you will notice that the low frequency noise is significantly reduced. Depending on the headsets you are using, your experience might be different.
 
-<figure id="figure2-9">
+<figure id="figure2-10">
     <img src="pictures/Console_mode.png" style="width: 500px;">
-    <figcaption class="figcaption leftAlign">Figure 2.9: OSP Web Apps in Console Mode. If you are using a browser such as Chrome, you can right click in the browser window and choose Inspect. In this mode, you can view exchange of information between RT-MHA and the app. You can also change the app to be formatted for laptop and mobile devices using the Toggle Device Toolbar icon.</figcaption>
+    <figcaption class="figcaption leftAlign">Figure 2.10: OSP Web Apps in Console Mode. If you are using a browser such as Chrome, you can right click in the browser window and choose Inspect. In this mode, you can view exchange of information between RT-MHA and the app. You can also change the app to be formatted for laptop and mobile devices using the Toggle Device Toolbar icon.</figcaption>
 </figure>
 
 &nbsp;

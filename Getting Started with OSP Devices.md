@@ -20,12 +20,18 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 &nbsp;
 ## Required Devices
 If you have received OSP devices, below are the devices are needed.  
+Devices = Hearing aid devices (left and right BTE-RICs)
+
+I see two micro usb ports on the device labeled, "uart" and "adb". I take that uart usb port is to connect to shell over uart ? What's "adb" usb port for? **Uart is for the shell and ADB is for both charging the device and updating the linux kernel.**
+
+I see 3 USB-C ports labeled, "left", "right" and "ephys". Left and Right ports are for connecting HA, what's "ephys" port used for? **EPhys is an experimental port for our in house development of EEG devices; it has a high speed ADC that can be used for any analog devices.**
+
 &nbsp;  
-<mark class="yellowHighlight">Show and describe list of devices in a 2-Column Table</mark>
+<mark style="background-color: yellow;">Show and describe list of devices in a 2-Column Table</mark>
 |   Device  |      Description      |                   Image of Device                   |
 |:---------:|:---------------------:|:---------------------------------------------------:|
 | Device #1 | Description of Device | ![placeholder image](pictures/placeHolderImage.png) |
-| Device #2 | Description of Device |                                                     |
+| Device #2 | Description of Device | ![placeholder image](pictures/placeHolderImage.png) |
 |           |                       |                                                     |
 
 <!--<table class="tg yellowHighlight">
@@ -52,6 +58,30 @@ If you have received OSP devices, below are the devices are needed.
 
 &nbsp;
 ## Installing Devices
+
+**Necessary to include additional figures for the devices?**
+
+**Disclaimer** \- The battery button is not functional currently, it may be operational in a future firmware update.  
+1. Install Fastboot. **Comment\: Fastboot installation link? If there's a separate list of steps to ensure proper installation, this needs to be documented so people don't get tripped up by third-party documentation.**  
+2. While device is off, plug in the USB cable into the ADB port (Android Debug Port). This enables you to charge and power up the device.
+3. While pressing and holding the mute button, turn on the device.
+
+There're also two LED indicators with "battery" and "speaker" sign. It doesn't light up as I turn on the device, is this behavior normal? **If there is a green light constantly on then the hearing aids are muted, in order to unmute press the speaker button. See disclaimer regarding the battery button.**
+
+4. Open up the terminal and type in `fastboot devices`. It should display one line and the ID of the device, meaning you successfully booted it up in Fastboot mode. **Could include terminal output to show, rather than tell, how this command would be successfully executed?**
+5. Grab two files: one labeled _boot-v7.img_, the other labeled _rootfs.simg_. **(location is TBD, on Bitbucket[up to date]/GitHub) Where should they retrieve these files, GitHub or Bitbucket?**
+6. Go to the folder that has these two files and run the following commands in order: `fastboot flash boot boot-v7.img`\, `fastboot flash rootfs rootfs.simg` **How does a person know that the terminal executed properly without errors/issues?**
+7. Once completed, restart the device with the headsets plugged in. **Headsets meaning the BTE-RICs? Plugged into the audio jack of the computer? Unclear here.**
+8. After boot, everything should be working, but it might take a moment. **What does after boot mean?**
+9. Then, you should see a hotspot called "ospboard". Enter the password "hearingaid" to connect to the hotspot.
+
+**Logging through hotspot or internet. Would this occur after step \#9?**
+By default, SSH is disabled. You need to enable this via uart connectivity (auto-login as root) Login credentials are the following: username and password are both "linaro".
+
+10. Go to your browser, and enter "192.168.8.1:5000". You should see the Node.js pages. To visit the PHP pages, remove ":5000".
+11. Login to researcher page, change the gains to see effects on BTE-RICs. **Logging in to researcher page only applies to Node.js, not PHP version of EWS. For testing purposes, would we prompt the person to refer to Section 1.4 and Chapter 2 in the separate EWS Getting Started Guide?**
+12. Confirm things are functioning, test to see if things are functioning. **Need a list of steps to elaborate what "things" need to be tested.**
+
 <mark class="yellowHighlight">
     Describe steps needed to install the devices.
     <ol class="yellowHighlight">
@@ -62,33 +92,27 @@ If you have received OSP devices, below are the devices are needed.
     </ol>
 </mark>
 
-1. Installing Fastboot (android utility)
-2. While device is off, plug in the USB cable into the ADB port (Android Debug Port).
-3. While pressing and holding mute button, turn on the device.
-4. Open up the terminal and type in `fastboot devices
-5. . It should display one line and the ID of the device, meaning you successfully booted it up in Fastboot mode.
-6. Grab two files (location is TBD, on Bitbucket[up to date]/GitHub): one is going be labeled "boot-v7.img", other one is labeled "rootfs.simg"
-7. Same folder as these two files, run the following commands: fastboot flash boot boot-v7.img, fastboot flash rootfs rootfs.simg
-8. Once completed, restart the device with the headsets plugged in.
-9. After boot, everything should be working.
-10. Devices = Hearing aid devices (left and right BTE-RICs)
-11. You should see a hotspot called "ospboard". On boot up, might take a moment.
-12. Connect to hotspot using password "hearingaid".
-13. Visit page using your browser "192.168.8.1:5000". Should get you to the Node.js pages. Without the ":5000" is where you get to the PHP pages.
-14. Login to researcher page, change the gains to see effects on BTE-RICs. Confirm things are functioning, test to see if things are functioning.
-
 <mark class="yellowHighlight">Topics Related to Dhruv's Questions and Dhiman's Answers
 </mark>
-1. I see that upon bringing up the device, it creates a hotspot named "ospboard". The ssid is password protected. Can you share the password? **Password: "hearingaid"**
-2. I see two micro usb ports on the device labeled, "uart" and "adb". I take that uart usb port is to connect to shell over uart ? What's "adb" usb port for? **Uart is for the shell and ADB is for both charging the device and updating the linux kernel.**
-3. I see 3 USB-C ports labeled, "left", "right" and "ephys". Left and Right ports are for connecting HA, what's "ephys" port used for **EPhys is an experimental port for our in house development of EEG devices; it has a high speed ADC that can be used for any analog devices.**
-4. Also, if I were to ssh into the device via hotspot, what's the username and password? **Username: linaro Password: linaro**
-5. There're also two LED indicators with "battery" and "speaker" sign. It doesn't light up as I turn on the device, is this behavior normal? **If there is a green light constantly on then the hearing aids are muted, in order to unmute press the speaker button. The battery button is not functional currently, it may be operational in a future firmware update.**
-6. Which port is supposed to be used for charging the battery **The ADB port.**
-7. May be all these questions are answered in some "getting started document" but I could not find it on github / bitbucket. If that's the case, can you point me to the right document? **We have to update your fork to get you the latest version of all documents and software. Let us know if you are able to get the devices running first we can have a zoom call if that will help.**
-
 
 &nbsp;
 ## Testing Devices
-<mark class="yellowHighlight">Describe steps needed to test the devices.
-</mark>
+<mark class="yellowHighlight">Describe steps needed to test the devices.</mark>
+
+**Second section: "How to do more with the device." Would this be part of testing or a continuation of the installation process?**  
+To do more with the devices, following these steps.
+
+1. Connect the USB cable to the uart (universal asynchronous receive transmit) port.
+2. Using your favorite terminal command to connect to comm. devices. "screen" (there's a bunch of them). Will have to figure out the port number ("/dev/ttyUSBX" for Linux, where "X" is the port number) **This step needs more explanation, probably will revisit the recording.**
+3. Baud rate: "115200" (example for "screen", it would be "screen /dev/ttyUSBX 115200") **Revisit recording.**
+4. Once you've established connection, you will be logged in as root.
+5. Source code for OSP is located at /root/osp-release-staging/. **Where does this become relevant in this section?**
+
+**Switching to Network Mode**
+6. If you want to switch the unit over to network mode, they need to "set_mode nm". This will restart the device, upon restart, goes to Network Management mode.
+7. Command `nmtui` to set up the wifi.
+8. After connecting to wifi, update the source code if needed and do other tasks depending if it needs internet or not. **What are these tasks?**
+
+**Changing Hotspot SSID Name**
+8. To change the hotspot SSID name, edit this file: `/etc/hostapd/hostapd.conf`
+9. In order to go to hotspot mode: run `set_mode hs`
