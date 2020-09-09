@@ -420,7 +420,7 @@ enter the following series of commands and steps in the terminal.</li>
             </li>
             <li><b>Before you proceed with the next step, be careful to not put the gain too high, otherwise your ears may start ringing. You may need to change the numerical value in the command to a lower value instead of -15.</b> Wear the audio device and make sure the audio output connection is stable. Enter the command <code>--gain -15</code> again and listen for external audio stimuli. This is how you know that RT-MHA is working.</li>
             <li>The last command to enter is <code>-q</code>, which will quit OSP.</li>
-            <li>If, after starting OSP, you cannot hear yourself when talking into the microphone , hit <code>^C</code> to exit OSP. Restart OSP and try again. If it fails several times, try a different input/output audio device.</li>
+            <li><mark class="yellowHighlight"><b>Martin's Comment</b> If, after starting OSP, you cannot hear yourself when talking into the microphone , hit <code>^C</code> to exit OSP. Restart OSP and try again. If it fails several times, try a different input/output audio device.</mark></li>
         </ol>
 </ol>
 
@@ -431,49 +431,9 @@ enter the following series of commands and steps in the terminal.</li>
 3. Open a browser, such as Chrome. Enter `localhost:5000` in the search bar. You will see the landing page as shown in Figure [2.7](#figure2-7).
 
 <figure id="figure2-7">
-    <img src="pictures/nodejsLandingPage.png" style="width: 500px;">
-    <figcaption class="figcaption leftAlign">Figure 2.7: EWS (Node.js) Landing Page. You should see "Researcher Login" and "Listener Login", with input fields for "Researcher ID" and "password" and a red "Sign Up" button in the upper right corner.</figcaption>
+    <img src="pictures/nodejs1.png" style="width: 500px;">
+    <figcaption class="figcaption leftAlign">Figure 2.7: OSP Landing Page. Some of the apps are not yet connected to RT-MHA, but included here for early feedback on the user interface. These in progress web-apps are 4AFC and AB Task apps.</figcaption>
 </figure>
-
-4. Proceed to make a new Researcher account by clicking on the "Sign Up" button. You should be able to enter a new name for your account as "Researcher ID" and a password to securely access your account. **Be sure to save your credentials in a place where you can remember them, as OSP does not currently have a feature to help you retrieve back your password!**
-
-5. Login using your new credentials. You should successfully be logged in if your landing page looks like Figure [2.8](#figure2-8).
-
-<figure id="figure2-8">
-    <img src="pictures/listenerManagement.png" style="width: 500px;">
-    <figcaption class="figcaption leftAlign">Figure 2.8: Once logged in, "Listener Management" is the page you should see. This page is under "Admin" in the left side of the screen.</figcaption>
-</figure>
-
-6. On the left side of the screen, you should see a list of text incorporating different aspects of EWS. Click on "Researcher Page", you should see many different settings, as Figure [2.9](#figure2-9) depicts.
-
-<figure id="figure2-9">
-    <img src="pictures/researcherPageNodejs.png" style="width: 500px;">
-    <figcaption class="figcaption leftAlign">Figure 2.9: "Researcher Page". By default, you should see many controls and a table containing different audio parameters (cr, g50, mpo, etc.) and frequency band values (250 to 8000 Hertz).</figcaption>
-</figure>
-
-<mark class="yellowHighlight">
-<b>Copied from section 2-3.</b><br><br>
-7. You should be within the "Amplification" page. Pay attention to the
-settings area labeled "Control via", which have buttons to toggle either
-"G50/G80" or "CR/65". Choose "CR/G65".<br><br>
-8. You can now change gains in individual bands by entering numerical
-values for individual cells in the G65 row. In the G65/All cell, enter 5
-for the value. You should see new values for RT-MHA highlighted.<br>
-9. Wear your connected audio device. Press the "Transmit" button below
-and listen. Your audio experience should be similar to when you entered
-the `--gain -15` command in the terminal.<br><br>
-10. Navigate to the terminal where you entered the osp command. Enter
-`-p`. You will notice values for the different settings for both the left
-and right audio channels: overall gain is -20, compression ratio (CR) is
-1, and G65 is 5.<br><br>
-11. Navigate back to the Researcher Page on your browser. You should still
-be in the Amplification section. Navigate to the 3 cells corresponding
-to the G65 row and columns 250, 500, and 1000. Enter -15 for each
-cell. By setting this value for the 3 cells, you are setting a -15 dB
-attenuation for the 250, 500, and 1000 Hz frequencies.<br><br>
-12. Press the "Transmit" button below and listen. As a result of changing
-these values, you will notice that the low frequency noise is significantly reduced. Depending on the headsets you are using, your experience might be different.
-</mark>
 
 &nbsp;  
 ### 2\-3 Test EWS \(PHP Version\)
@@ -492,7 +452,8 @@ Page interface, similar to Figure [2.9](#figure2-9).
 
 <figure id="figure2-9">
     <img src="pictures/ResearcherPage.png" style="width: 500px;">
-    <figcaption class="figcaption leftAlign">Figure 2.9: OSP Researcher Page. You can change Amplification, Noise Management and Feedback Management values from the first, second, and third tabs, respectively.</figcaption>
+    <figcaption class="figcaption leftAlign">Figure 2.9: OSP Researcher Page. You can change Amplification, Noise Management and Feedback Management values from the first, second and
+third tabs, respectively</figcaption>
 </figure>
 
 5. You should be within the "Amplification" page. Pay attention to the
