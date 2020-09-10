@@ -18,7 +18,7 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 [3 Testing Devices](#3-testing-devices)  
 
 &nbsp;
-## Required Devices
+## 1 Required Devices
 If you have received OSP devices, below are the devices are needed.  
 Devices = Hearing aid devices (left and right BTE-RICs)
 
@@ -57,7 +57,7 @@ I see 3 USB-C ports labeled, "left", "right" and "ephys". Left and Right ports a
 </table>-->
 
 &nbsp;
-## Installing Devices
+## 2 Installing Devices
 
 **Necessary to include additional figures for the devices?**
 
@@ -96,7 +96,7 @@ By default, SSH is disabled. You need to enable this via uart connectivity (auto
 </mark>
 
 &nbsp;
-## Testing Devices
+## 3 Testing Devices
 <mark class="yellowHighlight">Describe steps needed to test the devices.</mark>
 
 **Second section: "How to do more with the device." Would this be part of testing or a continuation of the installation process?**  
