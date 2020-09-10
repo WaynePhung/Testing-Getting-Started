@@ -36,7 +36,7 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 
 &nbsp;  
 ## 1 Release 2020a Installation
-##### \[[back to table of contents](#Table-of-Contents)]
+##### \[[back to table of contents](#table-of-contents)]
 &nbsp;   
 This section goes over what is required to install the Open Speech Platform software and what are the steps needed for the different installation methods.  The installation process of OSP may take around 30−90 minutes, depending on your computer, download speeds over the internet, and any installation errors that you may encounter and resolve.
 
@@ -199,15 +199,15 @@ it for the listeners specific prescription.
 * **Embedded Web Server (EWS)** - This is a process, represented as a graphical user interface on any web browser enabled device which can control the RT-MHA algorithm. There are two flavors of EWS available in this release written in two different programming languages. The NodeJS version is currently being developed and will replace all of the functionality found in the PHP version.
 
 Below are the available options to go about the installation process.
-1. [**Installing Everything - RT-MHA and Node\.js version of EWS**](#1\-3\-1-installing-everything-\--rt\-mha-and-nodejs-version-of-ews)   
+1. [**Installing Everything - RT-MHA and Node\.js version of EWS**](#1-3-1-installing-everything---rt-mha-and-nodejs-version-of-ews)   
 This is the latest version of OSP. Future releases will completely adopt
 Node.js.
-2. [**Installing Everything - RT-MHA and PHP version of EWS**](#1\-3\-2-installing-everything-\--rt\-mha-and-php-version-of-ews)  
+2. [**Installing Everything - RT-MHA and PHP version of EWS**](#1-3-2-installing-everything---rt-mha-and-php-version-of-ews)  
 This is the legacy version of OSP, which will eventually not be used in
 future releases. This version still has the \Goldilocks" page.
-3. [**Installing/Updating just the RT-MHA**](#1\-3\-3-installingupdating-just-the-rt-mha)
-4. [**Installing/Updating just the Node\.js version of EWS**](#1\-3\-4-installingupdating-just-the-nodejs-version-of-ews)
-5. [**Installing/Updating just the Node\.js version of EWS**](#1\-3\-5-installingupdating-just-the-php-version-of-ews)  
+3. [**Installing/Updating just the RT-MHA**](#1-3-3-installingupdating-just-the-rt-mha)
+4. [**Installing/Updating just the Node\.js version of EWS**](#1-3-4-installingupdating-just-the-nodejs-version-of-ews)
+5. [**Installing/Updating just the Node\.js version of EWS**](#1-3-5-installingupdating-just-the-php-version-of-ews)  
 
 Before you beginning any of these installation methods, here are additional disclaimers:
 * In the terminal, **be sure that you have already navigated to
@@ -362,7 +362,7 @@ As an example, Figure [1.4](#figure1-4) shows the command issued as `osp --input
 
 &nbsp;  
 ## 2 Release 2020a Package Testing and Validation
-##### \[[back to table of contents](#Table-of-Contents)]
+##### \[[back to table of contents](#table-of-contents)]
 This chapter describes how to check that the installed software package(s) for OSP are working properly.
 
 &nbsp;    
@@ -499,7 +499,7 @@ these values, you will notice that the low frequency noise is significantly redu
 
 &nbsp;
 ## 3 Release 2020a Development\: EWS \(Node.js version\)
-##### \[[back to table of contents](#Table-of-Contents)]
+##### \[[back to table of contents](#table-of-contents)]
 
 **Note** - This chapter is still a work in progress and will be more complete in the next release.
 
