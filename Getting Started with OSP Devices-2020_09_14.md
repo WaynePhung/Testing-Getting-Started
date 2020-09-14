@@ -14,8 +14,8 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 
 ## Table of Contents
 [1 Required Devices](#1-required-devices)  
-* [1-1 The PCD \(Processing and Communication Device\)](#1\-1-the-PCD-processing-and-communication-device)  
-* [1\-2 BTE-RICs \(Behind-the-Ear, Receivers-in-Canal\)](#1\-2-bte\-rics-behind-the-ear,-receivers-in-canal)  
+* [1-1 The PCD \(Processing and Communication Device\)](#1-1-the-PCD-processing-and-communication-device)  
+* [1\-2 BTE-RICs \(Behind-the-Ear, Receivers-in-Canal\)](#1-2-bte-rics-behind-the-ear-receivers-in-canal)  
 
 [2 Installing Devices](#2-installing-devices)  
 [3 Testing Devices](#3-testing-devices)  
