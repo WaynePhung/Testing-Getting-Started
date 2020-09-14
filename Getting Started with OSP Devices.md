@@ -18,7 +18,7 @@ Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/fo
 [3 Testing Devices](#3-testing-devices)  
 
 &nbsp;
-## 1 Required Devices
+## Required Devices
 If you have received OSP devices, below are the devices are needed.  
 Devices = Hearing aid devices (left and right BTE-RICs)
 
@@ -30,8 +30,8 @@ I see 3 USB-C ports labeled, "left", "right" and "ephys". Left and Right ports a
 <mark style="background-color: yellow;">Show and describe list of devices in a 2-Column Table</mark>
 |   Device  |      Description      |                   Image of Device                   |
 |:---------:|:---------------------:|:---------------------------------------------------:|
-| Device #1 | Description of Device | ![placeholder image](pictures/placeholderImage.png) |
-| Device #2 | Description of Device | ![placeholder image](pictures/placeholderImage.png) |
+| Device #1 | Description of Device | ![placeholder image](pictures/placeHolderImage.png) |
+| Device #2 | Description of Device | ![placeholder image](pictures/placeHolderImage.png) |
 |           |                       |                                                     |
 
 <!--<table class="tg yellowHighlight">
@@ -57,7 +57,7 @@ I see 3 USB-C ports labeled, "left", "right" and "ephys". Left and Right ports a
 </table>-->
 
 &nbsp;
-## 2 Installing Devices
+## Installing Devices
 
 **Necessary to include additional figures for the devices?**
 
@@ -92,27 +92,24 @@ By default, SSH is disabled. You need to enable this via uart connectivity (auto
     </ol>
 </mark>
 
-<mark class="yellowHighlight">Topics Related to Dhruv's Questions and Dhiman's Answers
-</mark>
-
 &nbsp;
-## 3 Testing Devices
+## Testing Devices
 <mark class="yellowHighlight">Describe steps needed to test the devices.</mark>
 
-**Second section: "How to do more with the device." Would this be part of testing or a continuation of the installation process?**  
+**Second section: "How to do more with the device." Would this be part of testing or a continuation of the installation process? There should also be an introductory statement that best summarizes the benefits/research value of going through these steps.**  
 To do more with the devices, following these steps.
 
 1. Connect the USB cable to the uart (universal asynchronous receive transmit) port.
-2. Using your favorite terminal command to connect to comm. devices. "screen" (there's a bunch of them). Will have to figure out the port number ("/dev/ttyUSBX" for Linux, where "X" is the port number) **This step needs more explanation, probably will revisit the recording.**
+2. Using your favorite terminal command to connect to comm. devices, (such as "screen" (there's a bunch of them). Will have to figure out the port number ("/dev/ttyUSBX" for Linux, where "X" is the port number for the uart device) **The file path specified for Linux needs more clarification as to where the person needs to locate "/dev/ttyUSBX" (through their file manager on Linux?)**
 3. Baud rate: "115200" (example for "screen", it would be "screen /dev/ttyUSBX 115200") **Revisit recording.**
 4. Once you've established connection, you will be logged in as root.
 5. Source code for OSP is located at /root/osp-release-staging/. **Where does this become relevant in this section?**
 
-**Switching to Network Mode**
+**Switching to Network Mode**  
 6. If you want to switch the unit over to network mode, they need to "set_mode nm". This will restart the device, upon restart, goes to Network Management mode.
 7. Command `nmtui` to set up the wifi.
 8. After connecting to wifi, update the source code if needed and do other tasks depending if it needs internet or not. **What are these tasks?**
 
-**Changing Hotspot SSID Name**
+**Changing Hotspot SSID Name**  
 8. To change the hotspot SSID name, edit this file: `/etc/hostapd/hostapd.conf`
 9. In order to go to hotspot mode: run `set_mode hs`

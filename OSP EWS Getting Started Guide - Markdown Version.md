@@ -54,17 +54,14 @@ requirements.
 2. **Memory/RAM**: At least 8GB or more.
 3. **Free Storage Space**: At least 2GB or more
 
-<br><br>
 <figure id="figure1-1">
+    <img src="pictures/MacSystemReq1.png" style="width: 500px;">
     <figcaption class="figcaption">Figure 1.1: Example of system requirements for a MacOS computer.</figcaption>
-    <img src="pictures/EWSPics/MacSystemReq1.png" style="width: 500px;">
 </figure>
-<br>
 <figure id="figure1-2">
+    <img src="pictures/LinuxSystemReq1.jpg" style="width: 500px;">
     <figcaption class="figcaption">Figure 1.2: Example of system requirements for a Linux computer on Ubuntu.</figcaption>
-    <img src="pictures/EWSPics/LinuxSystemReq1.jpg" style="width: 500px;">
 </figure>
-<br><br>
 
 To check if your computer meets these specifications...
 * **On Mac**, click on the Apple menu icon at the top of your screen. In the
@@ -99,31 +96,74 @@ done already.
 &nbsp;
 ### 1\-2 Download Files from OSP
 
+<mark class="yellowHighlight"><b>From the original Getting Started Guide</b></mark>  
 <ol>
     <li><b>Open the terminal application.</b></li>
         <ol class="letteredList">
-            <li><i>On Mac</i>, you can go to <code>Applications</code> within your Finder and type in the search bar "terminal". It should appear as a thumbnail that looks like a black box</li>
-            <li><i>On Linux</i>, there are many methods to open the terminal. An article on How-To Geek’s website covers this:<a href="hhttps://www.howtogeek.com/howto/22283/four-ways-to-get-instant-access-to-a-terminal-in-linux/" target="_none"> Four Ways to get Instant Access to a Terminal in Linux.</a></li>
+            <li>On Mac, you can go to <code>Applications</code> within your Finder and type in the search bar "terminal". It should appear as a thumbnail that looks like a black box</li>
+            <li>On Linux, there are many methods to open the terminal. An article on How-To Geek’s website covers this:<a href="hhttps://www.howtogeek.com/howto/22283/four-ways-to-get-instant-access-to-a-terminal-in-linux/" target="_none"> Four Ways to get Instant Access to a Terminal in Linux.</a></li>
+            <li><mark class="yellowHighlight"><b>Below are the steps that need to be reworked (from Martin's feedback).</b></mark></li>
+            <li><mark class="yellowHighlight">In the terminal, enter the command <code>cd /</code>. This will navigate you to the root directory</mark></li>
+            <li><mark class="yellowHighlight">Try to enter the command <code>ls</code>, which shows a list of folders within the directory that you’re in and help you assess whether you’re in the correct directory.</mark></li>
+            <li><mark class="yellowHighlight">For now, it is recommended that you navigate to the <code>Downloads</code> directory, which is where the installation files will be located. For Finder in macOS or File Manager in Linux, check where the Downloads directory is and see what order of the directory names are listed. Enter the command <code>cd (name1)/</code>, where (name1) is the directory that you want to navigate to (for example, you would enter <code>cd Downloads/)</code></mark></li>
+            <li><mark class="yellowHighlight">Repeatedly enter the <code>ls</code> and <code>cd (name1)/</code> commands as necessary until you are in the <code>Downloads</code> folder.</mark></li>
+        </ol>
+    <li><mark class="yellowHighlight"><b>Martin's feedback: Why did we install git?</b><br></mark><s><b>Install git.</b> By now, you should be in the Downloads directory in your terminal. If you already have git installed in your computer, skip this step and proceed to step 3. If not, follow these steps:</s></li>
+        <ol class="letteredList">
+            <s>
+            <li>Type in <code>sudo apt-get install git</code> to install git in your computer.</li>
+            <li>For Mac systems, you can install git from the following link: <a href="https://sourceforge.net/projects/git-osx-installer/files/" target="_none">https://sourceforge.net/projects/git-osx-installer/files/</a></li>
+            </s>
         </ol>
     <li>
-        <b>Download the 2020a Release .zip file from GitHub</b>: On your browser, navigate to <a href="https://github.com/nihospr01/OpenSpeechPlatform-UCSD" target="_none">https://github.com/nihospr01/OpenSpeechPlatform-UCSD</a> to download the latest release (see Figure <a href="#figure1-3">1.3</a>).
-            <br><br>
+        <b>Download the 2020a Release from GitHub</b>: On your browser, navigate to <a href="https://github.com/nihospr01/OpenSpeechPlatform-UCSD" target="_none">https://github.com/nihospr01/OpenSpeechPlatform-UCSD</a> to download the latest release. Press the "Clone or download" button in GitHub. You can either "clone the software on your computer" or "download ZIP file to your computer."
+        <ol class="letteredList">
+            <li>
+                <b>Use the </b><code>git clone</code><b> method.</b>
+                <br>
+                If you wish to clone, click on the button to the right of the text (it should look like a clipboard, see Figure <a href="#figure1-3">1.3</a>. This would copy the line of code.
                 <figure id="figure1-3">
-                    <figcaption class="figcaption">Figure 1.3: On <a href="https://github.com/nihospr01/OpenSpeechPlatform-UCSD" target="_none">Github</a> Click on the green "Code" button, then the "Download ZIP" button to retrieve the installation files on your computer.</figcaption>
-                    <img src="pictures/EWSPics/zipFileDownload.png" style="width: 500px;">
+                    <img src="pictures/cloneButton.jpg" style="width: 500px;">
+                    <figcaption class="figcaption">Figure 1.3: If you are using the <code>git clone</code> method, click on this button (outlined in red). This will copy the line of code, which you will paste into the terminal.</figcaption>
                 </figure>
-            <br><br>
-        <ol>
-           <li><i>MacOS computers</i> support opening .zip files. Once you download the .zip file, go to the "Downloads" within Finder and open the .zip file. It should appear unzipped as a folder with the same name.</li>
-            <li>For <i>Debian-based Linux computers</i>, go to the terminal and enter <code>sudo apt install unzip</code>.</li>
+                <br>
+                Navigate to the Downloads directory using the commands <code>cd (name1)/</code> and <code>ls</code> commands outlined in Step 1, if you haven’t already. Below is the resulting output, as files for OSP should be downloading.<br><br>
+                <samp>
+                    git clone https://github.com/nihospr01/OpenSpeechPlatform-UCSD.git<br>
+                    Cloning into 'OpenSpeechPlatform-UCSD'...<br>
+                    remote: Enumerating objects: 7909, done.<br>
+                    Receiving objects: 6% (535/7909), 238.29 MiB | 373.00 KiB/s
+                </samp>
+                <br>
+                <br>
+                 This process will take a considerable amount of time, depending on your internet download speed.
+                <br>
+                <br>
+            </li>
+            <li>
+                <b>.zip file method</b>: From the "Clone or download" button, click on "Download Zip" (you may refer back to Figure 1.3). You may need to wait a few moments before the browser prompts you to download the .zip file, which should have "OpenSpeechPlatform" attached to its name.
+                <ol class="romanNumeralList">
+                    <li><b>MacOS computers</b> support opening .zip files. Once you download the .zip file, go to the "Downloads" within Finder and open the .zip file. It should appear unzipped as a folder with the same name.</li>
+                    <li>For <b>Debian-based Linux computers</b>, go to the terminal and enter <code>sudo apt install unzip</code>. <mark class="yellowHighlight"><b>What does this do?</b></mark><s>may need a third-party application (such as <a href="https://www.7-zip.org/download.html" target="_none"> 7-Zip</a>) to open the .zip file. Extract the folder within the .zip file and move it to an appropriate place within the file manager application.</s></li>
+                </ol>
+            </li>
         </ol>
     </li>
-    <li>After doing the git clone command or downloading and extracting the .zip file, enter the command <code>cd OpenSpeechPlatform-UCSD/Software/Build-Scripts</code>, to navigate to a folder named <code>Build-Scripts</code> before proceeding to the next steps of the installation. You will install OSP’s software packages needed within this folder.
-    </li>
-    <li>
-        The zip file will be downloaded to your <code>Downloads</code> directory.  Open a terminal and unzip it.  (If <code>unzip</code> is not installed, you can install it with <code>sudo apt install unzip</code>)
-    </li>
+    <li>After doing the git clone command or downloading and extracting the .zip file, enter the command <code>cd OpenSpeechPlatform-UCSD/Software/Build-Scripts</code>, to navigate to a folder named "Build-Scripts" before proceeding to the next steps of the installation. You will install OSP’s software packages needed within this folder. Depending on your use, you will have multiple options and flexibility with regards to installation.</li>
 </ol>
+
+<mark class="yellowHighlight"><b>Martin's Notes for Zip File method of installation</b></mark>  
+Go to this link to OSP GitHub page: https://github.com/nihospr01/OpenSpeechPlatform-UCSD
+
+Then download the zip file, see the GIF below:
+
+<!--![zip](zip.gif)-->
+<mark class="yellowHighlight">Need the GIF file.</mark>
+
+
+The zip file will be downloaded to your `Downloads` directory.  Open a terminal
+and unzip it.  (If `unzip` is not installed, you can install it with
+`sudo apt install unzip`)
 
 ```
 > unzip ~/Downloads/OpenSpeechPlatform-UCSD-master.zip 
@@ -159,15 +199,15 @@ it for the listeners specific prescription.
 * **Embedded Web Server (EWS)** - This is a process, represented as a graphical user interface on any web browser enabled device which can control the RT-MHA algorithm. There are two flavors of EWS available in this release written in two different programming languages. The NodeJS version is currently being developed and will replace all of the functionality found in the PHP version.
 
 Below are the available options to go about the installation process.
-1. [**Installing Everything - RT-MHA and Node\.js version of EWS**](#1-3-1-installing-everything---rt-mha-and-nodejs-version-of-ews)   
+1. [**Installing Everything - RT-MHA and Node\.js version of EWS**](#1-3-1-installing-everything---rt-mha-and-nodejs-version-of-ews) 
 This is the latest version of OSP. Future releases will completely adopt
 Node.js.
-2. [**Installing Everything - RT-MHA and PHP version of EWS**](#1-3-2-installing-everything---rt-mha-and-php-version-of-ews)  
+2. [**Installing Everything - RT-MHA and PHP version of EWS**](#1-3-2-installing-everything---rt-mha-and-php-version-of-ews)
 This is the legacy version of OSP, which will eventually not be used in
 future releases. This version still has the \Goldilocks" page.
 3. [**Installing/Updating just the RT-MHA**](#1-3-3-installingupdating-just-the-rt-mha)
 4. [**Installing/Updating just the Node\.js version of EWS**](#1-3-4-installingupdating-just-the-nodejs-version-of-ews)
-5. [**Installing/Updating just the Node\.js version of EWS**](#1-3-5-installingupdating-just-the-php-version-of-ews)  
+5. [**Installing/Updating just the Node\.js version of EWS**](#1-3-5-installingupdating-just-the-php-version-of-ews) 
 
 Before you beginning any of these installation methods, here are additional disclaimers:
 * In the terminal, **be sure that you have already navigated to
@@ -244,8 +284,6 @@ installation issues and error messages in advance. This step will eventually be 
 the computer is sufficient for testing the audio. You do not have to follow these steps to connect your audio device, but it is recommended to do so.
 
 In your terminal, run the command `osp`, which implements the RT-MHA functions.  You can run it from any directory.
-
-&nbsp;
 ```
 ~/OpenSpeechPlatform-UCSD-master > osp
 Done
@@ -275,7 +313,6 @@ Output device # 10
 Input latency: 0.002
 Output latency: 0.003
 ```
-&nbsp;
 
 At this point, you should be able to talk into your microphone and hear the sound played back in your headset (or computer speakers) with a very small delay.  If that does not happen, something is wrong. Hit Control-C on your keyboard a couple of times to exit OSP. Run `osp` again within your terminal to restart it.
 
@@ -315,16 +352,13 @@ Output device # 9
 Input latency: 0.002
 Output latency: 0.003
 ```
-&nbsp;
 
 As an example, Figure [1.4](#figure1-4) shows the command issued as `osp --input device 6 --output device 6` on a Linux terminal, where `6` is the value associated to the connected audio device.
 
-<br>
 <figure id="figure1-4">
+    <img src="pictures/osp-4.png" style="width: 500px;">
     <figcaption class="figcaption">Figure 1.4: List of devices displayed by running the <code>pa_devs</code> command.</figcaption>
-    <img src="pictures/EWSPics/osp-4.png" style="width: 500px;">
 </figure>
-<br>
 
 &nbsp;  
 ## 2 Release 2020a Package Testing and Validation
@@ -338,12 +372,10 @@ You can interact with RT-MHA from the command line interface (CLI) to display an
 <ol>
     <li>Do not wear the audio device for now.</li>
     <li>Open or navigate to your terminal and enter the command osp. The terminal should show results similar to Figure <a href="#figure2-4">2.4</a>
-        <br><br>
         <figure id="figure2-4">
+            <img src="pictures/osp-1.png" style="width: 500px;">
             <figcaption class="figcaption">Figure 2.4: Output of the terminal when you issue <code>osp</code> command.</figcaption>
-            <img src="pictures/EWSPics/osp-1.png" style="width: 500px;">
         </figure>
-        <br><br>
     </li>
     <li>To familiarize you with the initial commands that OSP has, please
 enter the following series of commands and steps in the terminal.</li>
@@ -351,20 +383,16 @@ enter the following series of commands and steps in the terminal.</li>
             <li><code>-p</code> This command will print the <i>complete state</i> of RT-MHA. In the terminal messages above, notice that the gain on the left and right channels is -20 dB, to account for overall gain of RT-MHA.</li>
             <li><code>--gain -15</code> This command, with a value of -15, will set the system volume to -15 dB. By default, the gain is set to -20 dB. By entering this command, you are making RT-MHA louder by 5 dB. The -15 value can be changed to a different value.</li>
             <li>Type in <code>-p</code> to see the changed gain values. Your terminal should look similar to Figure <a href="#figure2-5">2.5</a>.
-                <br><br>
                 <figure id="figure2-5">
+                    <img src="pictures/osp-3.png" style="width: 500px;">
                     <figcaption class="figcaption leftAlign">Figure 2.5: Terminal messages that show the output of values before and after executing the <code>--gain -15</code> command. Before the command, gain is set to -20 dB by default, -15 dB after the command is executed. Remember that you can view these values by using the -p command, as shown.</figcaption>
-                    <img src="pictures/EWSPics/osp-3.png" style="width: 500px;">
                 </figure>
-                <br><br>
             </li>
             <li><code>-h</code> This command should help you experiment with RT-MHA by generating a list of commands that you can use within OSP, shown in Figure <a href="#figure2-6">2.6</a>.
-                <br><br>
                 <figure id="figure2-6">
+                    <img src="pictures/osp-2.png" style="width: 500px;">
                     <figcaption class="figcaption">Figure 2.6: High level commands for OSP using the command line interface (CLI).</figcaption>
-                    <img src="pictures/EWSPics/osp-2.png" style="width: 500px;">
                 </figure>
-                <br><br>
             </li>
             <li><b>Before you proceed with the next step, be careful to not put the gain too high, otherwise your ears may start ringing. You may need to change the numerical value in the command to a lower value instead of -15.</b> Wear the audio device and make sure the audio output connection is stable. Enter the command <code>--gain -15</code> again and listen for external audio stimuli. This is how you know that RT-MHA is working.</li>
             <li>The last command to enter is <code>-q</code>, which will quit OSP.</li>
@@ -378,32 +406,26 @@ enter the following series of commands and steps in the terminal.</li>
 2. In the first terminal, type `osp`. In the second terminal, type `ews`.
 3. Open a browser, such as Chrome. Enter `localhost:5000` in the search bar. You will see the landing page as shown in Figure [2.7](#figure2-7).
 
-<br>
 <figure id="figure2-7">
+    <img src="pictures/nodejsLandingPage.png" style="width: 500px;">
     <figcaption class="figcaption leftAlign">Figure 2.7: EWS (Node.js) Landing Page. You should see "Researcher Login" and "Listener Login", with input fields for "Researcher ID" and "password" and a red "Sign Up" button in the upper right corner.</figcaption>
-    <img src="pictures/EWSPics/nodejsLandingPage.png" style="width: 500px;">
 </figure>
-<br>
 
 4. Proceed to make a new Researcher account by clicking on the "Sign Up" button. You should be able to enter a new name for your account as "Researcher ID" and a password to securely access your account. **Be sure to save your credentials in a place where you can remember them, as OSP does not currently have a feature to help you retrieve back your password!**
 
 5. Login using your new credentials. You should successfully be logged in if your landing page looks like Figure [2.8](#figure2-8).
 
-<br>
 <figure id="figure2-8">
+    <img src="pictures/listenerManagement.png" style="width: 500px;">
     <figcaption class="figcaption leftAlign">Figure 2.8: Once logged in, "Listener Management" is the page you should see. This page is under "Admin" in the left side of the screen.</figcaption>
-    <img src="pictures/EWSPics/listenerManagement.png" style="width: 500px;">
 </figure>
-<br>
 
 6. On the left side of the screen, you should see a list of text incorporating different aspects of EWS. Click on "Researcher Page", you should see many different settings, as Figure [2.9](#figure2-9) depicts.
 
-<br>
 <figure id="figure2-9">
+    <img src="pictures/researcherPageNodejs.png" style="width: 500px;">
     <figcaption class="figcaption leftAlign">Figure 2.9: "Researcher Page". By default, you should see many controls and a table containing different audio parameters (cr, g50, mpo, etc.) and frequency band values (250 to 8000 Hertz).</figcaption>
-    <img src="pictures/EWSPics/researcherPageNodejs.png" style="width: 500px;">
 </figure>
-<br>
 
 <mark class="yellowHighlight">
 <b>Copied from section 2-3.</b><br><br>
@@ -436,22 +458,18 @@ these values, you will notice that the low frequency noise is significantly redu
 2. In the first terminal, type `osp`. In the second terminal, type `ews`.
 3. Open a browser, such as Chrome. Enter `localhost:8080` in the search bar. You will see the landing page as shown in Figure [2.8](#figure2-8).
     
-<br>
 <figure id="figure2-8">
+    <img src="pictures/LandingPage.png" style="width: 500px;">
     <figcaption class="figcaption leftAlign">Figure 2.8: OSP Landing Page. Some of the apps are not yet connected to RT-MHA, but included here for early feedback on the user interface. These in progress web-apps are 4AFC and AB Task apps.</figcaption>
-    <img src="pictures/EWSPics/LandingPage.png" style="width: 500px;">
 </figure>
-<br>
 
 4. There are several blue-green buttons with labels. Navigate and click the one labeled "Researcher Page". What you should see is the Researcher
 Page interface, similar to Figure [2.9](#figure2-9).
 
-<br>
 <figure id="figure2-9">
+    <img src="pictures/ResearcherPage.png" style="width: 500px;">
     <figcaption class="figcaption leftAlign">Figure 2.9: OSP Researcher Page. You can change Amplification, Noise Management and Feedback Management values from the first, second, and third tabs, respectively.</figcaption>
-    <img src="pictures/EWSPics/ResearcherPage.png" style="width: 500px;">
 </figure>
-<br>
 
 5. You should be within the "Amplification" page. Pay attention to the
 settings area labeled "Control via", which have buttons to toggle either
@@ -474,12 +492,10 @@ attenuation for the 250, 500, and 1000 Hz frequencies.
 10. Press the "Transmit" button below and listen. As a result of changing
 these values, you will notice that the low frequency noise is significantly reduced. Depending on the headsets you are using, your experience might be different.
 
-<br>
 <figure id="figure2-10">
+    <img src="pictures/Console_mode.png" style="width: 500px;">
     <figcaption class="figcaption leftAlign">Figure 2.10: OSP Web Apps in Console Mode. If you are using a browser such as Chrome, you can right click in the browser window and choose Inspect. In this mode, you can view exchange of information between RT-MHA and the app. You can also change the app to be formatted for laptop and mobile devices using the Toggle Device Toolbar icon.</figcaption>
-    <img src="pictures/EWSPics/Console_mode.png" style="width: 500px;">
 </figure>
-<br>
 
 &nbsp;
 ## 3 Release 2020a Development\: EWS \(Node.js version\)
@@ -510,3 +526,4 @@ to the backend \(**Note: This code will not compile the frontend
 into the backend, for that you will need to run the script in
 step 1**\)
 &nbsp;   
+
