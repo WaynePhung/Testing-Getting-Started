@@ -12,49 +12,54 @@ This document describes steps to download, build, install and test the browser-b
 Please visit [OSP Forum - Getting Started](http://openspeechplatform.ucsd.edu/forums/forum/getting-started/) to report issues and suggest improvements.
 
 ## Table of Contents
-[1 Release 2020a Installation](#1-release-2020a-installation)   
+[1 OSP Installation](#1-osp-installation)   
 * [1\-1 Requirements for OSP](#1-1-requirements-for-osp)
-    * [1\-1\-1 Computer Requirements](#1-1-2-computer-requirements)
+    * [1\-1\-1 Computer and Audio Requirements](#1-1-2-computer-and-audio-requirements)
     * [1\-1\-2 Installation Requirements](#1-1-3-installation-requirements)
-* [1\-2 Download Files from OSP](#1-2-download-files-from-osp)
-* [1\-3 Choosing the Installation Method](#1-3-choosing-the-installation-method)
-    * [1\-3\-1 Installing Everything \- RT\-MHA and Node\.js version of EWS](#1-3-1-installing-everything---rt-mha-and-nodejs-version-of-ews)
-    * [1\-3\-2 Installing Everything \- RT\-MHA and PHP version of EWS](#1-3-2-installing-everything---rt-mha-and-php-version-of-ews)
-    * [1\-3\-3 Installing/Updating just the RT\-MHA](#1-3-3-installingupdating-just-the-rt-mha)
-    * [1\-3\-4 Installing/Updating just the Node\.js version of EWS](#1-3-4-installingupdating-just-the-nodejs-version-of-ews)
-    * [1\-3\-5 Installing/Updating just the PHP version of EWS](#1-3-5-installingupdating-just-the-php-version-of-ews)  
-* [1\-4 Connecting Your Audio Device](#1-4-connecting-your-audio-device)
-    * [1\-4\-1 On Mac Computers](#1-4-1-on-mac-computers)
-    * [1\-4\-2 On Linux Computers](#1-4-2-on-linux-computers)
+* [1\-2 Download and Installation Steps](#1-2-download-and-installation-steps)
+* [1\-3 Connecting Your Audio Device](#1-3-connecting-your-audio-device)
+    * [1\-3\-1 On Mac Computers](#1-3-1-on-mac-computers)
+    * [1\-3\-2 On Linux Computers](#1-3-2-on-linux-computers)
 
-[2 Release 2020a Package Testing and Validation](#2-release-2020a-package-testing-and-validation)
+[2 OSP Package Testing and Validation](#2-osp-package-testing-and-validation)
 * [2\-1 Test RT\-MHA](#2-1-test-rt-mha)
 * [2\-2 Test EWS \(Node\.js Version\)](#2-2-test-ews-nodejs-version)  
 * [2\-3 Test EWS \(PHP Version\)](#2-3-test-ews-php-version)  
 
-[3 Release 2020a Development\: EWS \(Node\.js version\)](#3-release-2020a-development-ews-nodejs-version)
+[3 OSP Development\: EWS \(Node\.js version\)](#3-osp-development-ews-nodejs-version)
 
 &nbsp;  
-## 1 Release 2020a Installation
+## 1 OSP Installation
 ##### \[[back to table of contents](#table-of-contents)]
 &nbsp;   
-This section goes over what is required to install the Open Speech Platform software and what are the steps needed for the different installation methods.  The installation process of OSP may take around 30−90 minutes, depending on your computer, download speeds over the internet, and any installation errors that you may encounter and resolve.
+This section describes:  
+1. Computer requirements and software application knowledge needed to install the Open Speech Platform (OSP) software.
+2. Actual steps to download and install files needed to run OSP.  
+
+Installation time may take ~30−90 minutes, depending on your computer, internet download speeds, and any installation errors that you may encounter and resolve.
+
+Before proceeding, know that OSP is composed of two main components, which are described below and referenced later in this guide. 
+* **Real Time Master Hearing Aid (RT-MHA)** - This is the hearing
+aid algorithm which takes the audio from the environment and modifies
+it for the listeners specific prescription.
+* **Embedded Web Server (EWS)** - This is a process, represented as a graphical user interface on any web browser enabled device which can control the RT-MHA algorithm. There are two flavors of EWS available in this release written in two different programming languages. The NodeJS version is currently being developed and will replace all of the functionality found in the PHP version.
 
 &nbsp;   
 ### 1\-1 Requirements for OSP
 &nbsp;
 
-#### _1\-1\-1 Computer Requirements_
-In order to use OSP, you must use either a Mac or a _debian-based_ Linux
-machine (such as Ubuntu or Linaro) with the following processing, memory,
-and storage requirements. Figures [1.1](#figure1-1) and [1.2](#figure1-2) provide a reference for these
-requirements.
+#### _1\-1\-1 Computer and Audio Requirements_
 
-1. **Processor**: Equivalent to an Intel Core i5 processor.
-2. **Memory/RAM**: At least 8GB or more.
-3. **Free Storage Space**: At least 2GB or more
+1. **Operating System**: Either a Mac or a _debian-based_ Linux
+machine (such as Ubuntu or Linaro) will suffice.
+2. **Processor**: Equivalent to an Intel Core i5 processor.
+3. **Memory/RAM**: At least 8GB or more.
+4. **Free Storage Space**: At least 2GB or more
+5. **Audio**: Your computer’s built-in microphone and speakers. Preferable if have a working device, such as a headset or pair of wired headphones.
 
-<br><br>
+ See figures [1.1](#figure1-1) and [1.2](#figure1-2) below as a reference for requirements #1 to #4.
+
+<br>
 <figure id="figure1-1">
     <figcaption class="figcaption">Figure 1.1: Example of system requirements for a MacOS computer.</figcaption>
     <img src="pictures/EWSPics/MacSystemReq1.png" style="width: 500px;">
@@ -64,39 +69,37 @@ requirements.
     <figcaption class="figcaption">Figure 1.2: Example of system requirements for a Linux computer on Ubuntu.</figcaption>
     <img src="pictures/EWSPics/LinuxSystemReq1.jpg" style="width: 500px;">
 </figure>
-<br><br>
+<br>
 
 To check if your computer meets these specifications...
-* **On Mac**, click on the Apple menu icon at the top of your screen. In the
-dropdown menu, choose "About This Mac". The specifications should
-look similar to Figure [1.1](#figure1-1). For more information, see how [Apple explains
-computer specifications](https://support.apple.com/en-us/HT203001).
+* **On Mac**
+    1. Click on the Apple menu icon at the top of your screen.
+    2. In the dropdown menu, choose "About This Mac". The specifications should look similar to Figure [1.1](#figure1-1).  
+    For more information, see how [Apple explains computer specifications](https://support.apple.com/en-us/HT203001).
 &nbsp;
-* **On Linux**, you may need to use a terminal that accepts command
-lines to figure out the specifications. Figure [1.2](#figure1-2) is a reference of what
-the specifications look like on Ubuntu 18.04.1, though this may appear
-differently for different Linux systems. You check out this Stack Exchange
-post for answers related to Ubuntu: [askUbuntu - How do I check system
-specifications?](https://askubuntu.com/questions/55609/how-do-i-check-system-specifications)
+
+* **On Linux**  
+You may need to use a terminal that accepts command
+lines to figure out the specifications. Figure [1.2](#figure1-2) is a reference of what the specifications look like on Ubuntu 18.04.1, though this may appear differently for different Linux systems.  
+
+    You check out this Stack Exchange post for answers related to Ubuntu: [askUbuntu - How do I check system specifications?](https://askubuntu.com/questions/55609/how-do-i-check-system-specifications)
 
 After the installation, to verify that the system can deliver audio output,
-**you need some way to input and output audio**. Ideally, a working
-device such as a headset or pair of headphones would be used, but your
-computer’s built-in microphone and speakers are good enough as long as the
-volume settings are not set to mute.
+**you need some way to input and output audio**, which is why having a device or your computer speakers/microphone **that isn't muted** is important. 
+
 #### _1\-1\-2 Installation Requirements_
 Finally, these are the additional applications and tools needed to successfully
 install OSP
-* **Command Terminal**: You will need to know how to operate the
+1. **Command Terminal**: You will need to know how to operate the
 command terminal with working knowledge of basic terminal commands
 and features. This is to navigate through different folders and operate
 OSP after installation. Fortunately, this guide will cover all of the
 commands needed, as long as you follow the steps in order.
-* **GitHub and git**: Our files are stored online via our GitHub page.
+2. **GitHub and git**: Our files are stored online via our GitHub page.
 You will need to install git within the terminal, if this hasn’t been
 done already.
-
 &nbsp;
+
 ### 1\-2 Download Files from OSP
 
 <ol>
@@ -134,15 +137,18 @@ Archive:  /home/mmh/Downloads/OpenSpeechPlatform-UCSD-master.zip
 ...
 ```
 
-Now go into the directory and install the software
+Now go into the directory and install the software using one or both of the following commands: 
+* `./install_all_njs` - This command will install the Node.js version of EWS web apps in the folder path "/usr/local". It is recommended to use this version as it represents the latest of the OSP software, and it will also have continued support for OSP software updates.  
+* `./install_all_php` - This command will install the PHP/Laravel version of EWS web apps in the folder path "/usr/local". This is an older version of the OSP software and should only be used if you wish to take advantage of older features of OSP, such as the "Goldilocks". 
+
 
 ```
 > cd OpenSpeechPlatform-UCSD-master/Software/Build-Scripts/
 ~/OpenSpeechPlatform-UCSD-master/Software/Build-Scripts 
-> ./install_all_php
+> ./install_all_njs
 [follow directions]
  ~/OpenSpeechPlatform-UCSD-master/Software/Build-Scripts 
-> ./install_all_njs 
+> ./install_all_php 
 [follow directions]
 ```
 
@@ -327,7 +333,7 @@ As an example, Figure [1.4](#figure1-4) shows the command issued as `osp --input
 <br>
 
 &nbsp;  
-## 2 Release 2020a Package Testing and Validation
+## 2 OSP Package Testing and Validation
 ##### \[[back to table of contents](#table-of-contents)]
 This chapter describes how to check that the installed software package(s) for OSP are working properly.
 
@@ -482,7 +488,7 @@ these values, you will notice that the low frequency noise is significantly redu
 <br>
 
 &nbsp;
-## 3 Release 2020a Development\: EWS \(Node.js version\)
+## 3 OSP Development\: EWS \(Node.js version\)
 ##### \[[back to table of contents](#table-of-contents)]
 
 **Note** - This chapter is still a work in progress and will be more complete in the next release.
