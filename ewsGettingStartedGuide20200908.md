@@ -1,3 +1,7 @@
+---
+title: ewsGettingStartedGuide20200908
+---
+
 # OSP \- EWS Getting Started Guide - Release 2020a
 Website: http://openspeechplatform.ucsd.edu/
 
