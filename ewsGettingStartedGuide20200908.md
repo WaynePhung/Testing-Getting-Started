@@ -3,6 +3,8 @@ title: ewsGettingStartedGuide20200908
 ---
 
 # OSP \- EWS Getting Started Guide - Release 2020a
+Home page for guide: [https://waynephung.github.io/Testing-Getting-Started/](https://waynephung.github.io/Testing-Getting-Started/)
+
 Website: http://openspeechplatform.ucsd.edu/
 
 ## Abstract
